@@ -2,12 +2,12 @@
 
 const express = require('express')
 const { join } = require('path')
-const nunjucks = require('nunjucks')
+const njk = require('nunjucks')
 const routes = require('./routes/index')
 
 const app = express()
 
-nunjucks.configure('views', {
+njk.configure('views', {
   autoescape: true,
   express: app
 })
