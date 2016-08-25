@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "lint": "eslint app.js routes/*.js bin/*",
     "start": "node ./bin/www"
   },
   "dependencies": {
@@ -14,5 +15,8 @@
     "node-sass-middleware": "0.8.0",
     "nunjucks": "^2.4.2",
     "serve-favicon": "~2.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.3.1"
   }
 }
