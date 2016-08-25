@@ -17,8 +17,11 @@ app
 
   //.use(require('serve-favicon')(join(__dirname, 'public', 'favicon.ico')))
 
-  .use(require('morgan')('dev'))
+if (app.get('env') !== 'test') {
+  app.use(require('morgan')('dev'))
+}
 
+app
   .use(require('node-sass-middleware')({
     src: join(__dirname, 'assets'),
     dest: join(__dirname, 'public'),
