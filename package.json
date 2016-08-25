@@ -1,9 +1,23 @@
 {
   "name": "tropy.org",
-  "version": "0.0.0",
+  "description": "Tropy solves research entropy.",
+  "version": "0.0.1-alpha",
   "private": true,
+  "license": "AGPL-3.0",
+  "author": {
+    "name": "Center for History and New Media, George Mason University",
+    "url": "https://chnm.gmu.edu"
+  },
+  "contributors": [
+    "Sylvester Keil <sylvester@keil.or.at>",
+    "Johannes Krtek <johannes.krtek@flachware.com>"
+  ],
+  "engines": {
+    "node": ">=6"
+  },
   "scripts": {
-    "lint": "eslint app.js routes/*.js bin/* || true",
+    "lint": "eslint app.js routes/*.js bin/*",
+    "pretest": "npm run lint --silent",
     "test": "mocha test/**/*_test.js",
     "start": "node ./bin/www"
   },
