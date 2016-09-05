@@ -36,13 +36,13 @@ app
     ],
     outputStyle: 'compressed',
     indentedSyntax: false,
-    debug: true,
+    debug: (app.get('env') === 'development'),
     sourceMap: true
   }))
 
   .use(express.static(paths.public))
-  .use(express.static('/images', join(paths.assets, 'images')))
-  .use(express.static('/fonts', join(paths.assets, 'fonts')))
+  .use('/images', express.static(join(paths.assets, 'images')))
+  .use('/fonts', express.static(join(paths.assets, 'fonts')))
 
   .use('/', routes)
 
