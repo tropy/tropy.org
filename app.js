@@ -1,11 +1,17 @@
 'use strict'
 
 const express = require('express')
-const { join } = require('path')
+const { join, resolve } = require('path')
 const njk = require('nunjucks')
 const routes = require('./routes/index')
 
 const app = express()
+
+const paths = {
+  assets: resolve(__dirname, 'assets'),
+  public: resolve(__dirname, 'public'),
+  twbs: resolve(__dirname, 'node_modules', 'bootstrap-sass', 'assets')
+}
 
 njk.configure('views', {
   autoescape: true,
@@ -23,13 +29,20 @@ if (app.get('env') !== 'test') {
 
 app
   .use(require('node-sass-middleware')({
-    src: join(__dirname, 'assets'),
-    dest: join(__dirname, 'public'),
-    indentedSyntax: true,
+    src: paths.assets,
+    dest: paths.public,
+    includePaths: [
+      join(paths.twbs, 'stylesheets')
+    ],
+    outputStyle: 'compressed',
+    indentedSyntax: false,
+    debug: true,
     sourceMap: true
   }))
 
-  .use(express.static(join(__dirname, 'public')))
+  .use(express.static(paths.public))
+  .use(express.static('/images', join(paths.assets, 'images')))
+  .use(express.static('/fonts', join(paths.assets, 'fonts')))
 
   .use('/', routes)
 
