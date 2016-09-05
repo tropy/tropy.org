@@ -15,6 +15,7 @@ const paths = {
 
 njk.configure('views', {
   autoescape: true,
+  watch: (app.get('env') === 'development'),
   express: app
 })
 
