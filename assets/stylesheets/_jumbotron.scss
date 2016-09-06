@@ -5,12 +5,14 @@
 .jumbotron {
   text-align: center;
   padding-bottom: 0;
+  margin-bottom: 44px; // 64px
 
   @media (min-width: $screen-sm-min) {
     height: 659px;
     padding: $space-xxl 0;
     background: url(#{image-path("key-visual.svg")}) no-repeat center bottom;
     background-size: 3000px 659px;
+    margin-bottom: $jumbotron-padding; // 96px
   }
 
   .tropy-icon {

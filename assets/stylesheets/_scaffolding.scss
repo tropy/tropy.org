@@ -5,7 +5,14 @@
 hr {
   border-top-width: 2px;
   margin: {
-    top: 74px;
-    bottom: 67px;
+    top: 42px;
+    bottom: 44px;
+  }
+
+  @media (min-width: $screen-sm-min) {
+    margin: {
+      top: 74px;
+      bottom: 67px;
+    }
   }
 }

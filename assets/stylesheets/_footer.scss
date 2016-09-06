@@ -5,7 +5,11 @@
 footer {
   background: $gray-lightest;
   text-align: center;
-  padding: 36px 0;
+  padding: 20px 0; // 64px height
+
+  @media (min-width: $screen-sm-min) {
+    padding: 36px 0;
+  }
 
   a {
     color: $blue-gray;
