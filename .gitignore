@@ -22,3 +22,7 @@ build/Release
 node_modules
 
 public/stylesheets
+
+tmp
+config.json
+
