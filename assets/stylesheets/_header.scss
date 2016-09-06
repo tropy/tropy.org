@@ -4,7 +4,7 @@
 
 header {
   height: $space-xxxl;
-  padding: $space-md;
+  padding: $space-md 0;
 
   @media (min-width: $screen-sm-min) {
     height: $space-max;
