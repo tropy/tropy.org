@@ -13,7 +13,7 @@ const paths = {
   twbs: resolve(__dirname, 'node_modules', 'bootstrap-sass', 'assets')
 }
 
-njk.configure('views', {
+njk.configure(['views', 'public'], {
   autoescape: true,
   watch: (app.get('env') === 'development'),
   express: app

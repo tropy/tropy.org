@@ -4,6 +4,7 @@
   "version": "0.0.1-alpha",
   "private": true,
   "license": "AGPL-3.0",
+  "homepage": "https://tropy.org",
   "author": {
     "name": "Center for History and New Media, George Mason University",
     "url": "https://chnm.gmu.edu"

@@ -1,0 +1,26 @@
+{
+  "@context": {
+    "schema": "https://schema.org",
+    "pending": "https://pending.schema.org"
+  },
+
+  "@id": "https://tropy.org",
+  "@type": "pending:SoftwareApplication",
+
+  "schema:name": "Tropy",
+  "schema:description": "Image management for resarchers and archivists",
+  "schema:license": "https://github.com/tropy/tropy/blob/master/LICENSE",
+  "schema:url": "https://tropy.org",
+  "schema:author": {
+    "@id": "https://chnm.gmu.edu",
+    "@type": "schema:Organisation",
+    "schema:name": "Center for History and New Media, George Mason University"
+  },
+  "schema:contributor": [
+    {
+      "@id": "https://sylvester.keil.or.at",
+      "@type": "schema:Person",
+      "schema:name": "Sylvester Keil"
+    }
+  ]
+}
