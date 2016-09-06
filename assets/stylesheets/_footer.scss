@@ -1,0 +1,24 @@
+//
+// Footer
+// --------------------------------------------------
+
+footer {
+  background: $gray-lightest;
+  text-align: center;
+  padding: 36px 0;
+
+  a {
+    color: $blue-gray;
+    margin: 0 10px;
+    font-size: 14px;
+
+    @media (min-width: $screen-sm-min) {
+      margin: 0 ($grid-gutter-width / 2);
+      font-size: $font-size-base;
+    }
+
+    &:hover {
+      color: $blue-gray;
+    }
+  }
+}

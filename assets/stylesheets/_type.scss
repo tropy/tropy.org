@@ -1,0 +1,22 @@
+//
+// Type
+// --------------------------------------------------
+
+h1 {
+  font-family: "HelveticaNeue-Thin", $font-family-sans-serif;
+  text-align: center;
+  margin: {
+    top: 0;
+    bottom: 24px;
+  }
+}
+
+.lead {
+  text-align: center;
+  margin-bottom: 78px;
+  line-height: 1.5;
+}
+
+p {
+  margin-bottom: $font-size-base;
+}
