@@ -1,0 +1,67 @@
+//
+// Jumbotron
+// --------------------------------------------------
+
+.jumbotron {
+  text-align: center;
+  padding-bottom: 0;
+
+  @media (min-width: $screen-sm-min) {
+    height: 659px;
+    padding: $space-xxl 0;
+    background: url(#{image-path("key-visual.svg")}) no-repeat center bottom;
+    background-size: 3000px 659px;
+  }
+
+  .tropy-icon {
+    display: block;
+    margin: 0 auto 44px;
+
+    @media (max-width: $screen-xs-max) {
+      width: 144px;
+      height: auto;
+      margin-bottom: 32px; // 42px proportionally to desktop version
+    }
+  }
+
+  .lead {
+    font: {
+      size: 20px;
+      weight: 300;
+    }
+    line-height: $headings-line-height;
+    margin-bottom: 26px;
+
+    @media (min-width: $screen-sm-min) {
+      font-size: $jumbotron-font-size;
+      margin-bottom: 39px;
+    }
+
+    small {
+      display: block;
+      font-size: 80%;
+      line-height: $line-height-base;
+
+      @media (min-width: $screen-sm-min) {
+        font-size: 60%;
+      }
+    }
+  }
+
+  .mobile-hint {
+    font: {
+      size: $font-size-small;
+      weight: 400;
+    }
+    width: 90%;
+    margin: 18px auto 0;
+  }
+
+  hr {
+    margin: {
+      top: 58px;
+      bottom: 0;
+    }
+  }
+}
+

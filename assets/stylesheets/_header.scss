@@ -3,8 +3,13 @@
 // --------------------------------------------------
 
 header {
-  height: 96px;
-  padding: 32px 0;
+  height: $space-xxxl;
+  padding: $space-md;
+
+  @media (min-width: $screen-sm-min) {
+    height: $space-max;
+    padding: $space-xl 0;
+  }
 
   a {
     color: $blue-gray;
@@ -26,10 +31,10 @@ header {
   color: $blue-gray;
   float: left;
   line-height: 1;
+}
 
-  span {
-    vertical-align: middle;
-  }
+.brand-title {
+  vertical-align: middle;
 }
 
 .tropy-icon {
