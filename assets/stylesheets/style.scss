@@ -1,13 +1,36 @@
+// Asset helper
+// --------------------------------------------------
+
 @import "asset_helper";
 
-@import "bootstrap/variables";
+
+// Variables
+// --------------------------------------------------
+
+@import "variables";
+
+
+// Bootstrap
+// --------------------------------------------------
+
+// Mixins
 @import "bootstrap/mixins";
 
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+// Reset and dependencies
+@import "bootstrap/normalize";
+@import "bootstrap/print";
 
-a {
-  color: #00B7FF;
-}
+// Core CSS
+@import "bootstrap/scaffolding";
+@import "bootstrap/type";
+@import "bootstrap/code";
+@import "bootstrap/grid";
+@import "bootstrap/tables";
+@import "bootstrap/forms";
+@import "bootstrap/buttons";
+
+
+// Tropy
+// --------------------------------------------------
+
+@import "scaffolding";
