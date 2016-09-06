@@ -3,7 +3,10 @@
 // --------------------------------------------------
 
 h1 {
-  font-family: "HelveticaNeue-Thin", $font-family-sans-serif;
+  font: {
+    family: "HelveticaNeue-Thin", $font-family-sans-serif;
+    weight: 200;
+  }
   text-align: center;
   margin: {
     top: 0;
