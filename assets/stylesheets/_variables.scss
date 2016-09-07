@@ -73,7 +73,7 @@ $font-size-small:         14px;
 
 $font-size-h1:            ($font-size-base * 3.75); // 60px
 $font-size-h2:            ($font-size-base * 2.5); // 48px
-$font-size-h3:            ceil(($font-size-base * 1.7)) !default; // ~24px
+$font-size-h3:            ($font-size-base * 1.5); // 24px
 $font-size-h4:            ceil(($font-size-base * 1.25)) !default; // ~18px
 $font-size-h5:            $font-size-base !default;
 $font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
@@ -510,7 +510,7 @@ $pager-disabled-color:                 $pagination-disabled-color !default;
 //
 //##
 
-$jumbotron-padding:              67px;
+$jumbotron-padding:              0;
 $jumbotron-color:                inherit !default;
 $jumbotron-bg:                   #fff;
 $jumbotron-heading-color:        inherit !default;
