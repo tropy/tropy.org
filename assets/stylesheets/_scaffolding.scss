@@ -32,6 +32,16 @@ hr {
     font-size: $font-size-small;
     margin-bottom: $font-size-small;
     color: $headings-color;
+
+    strong {
+      line-height: 1; // Fix line-height bug.
+    }
+  }
+
+  .second-line {
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      display: block;
+    }
   }
 }
 
@@ -111,5 +121,4 @@ hr {
       margin-bottom: 76px;
     }
   }
-
 }
