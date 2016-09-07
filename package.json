@@ -17,6 +17,7 @@
     "node": ">=6"
   },
   "scripts": {
+    "deploy": "shipit production deploy",
     "lint": "eslint app.js routes/*.js bin/*",
     "pretest": "npm run lint --silent",
     "test": "mocha test/**/*_test.js",

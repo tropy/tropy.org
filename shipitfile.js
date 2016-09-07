@@ -50,6 +50,8 @@ module.exports = shipit => {
     shipit
       .remote([
         `cd ${shipit.config.deployTo}`,
+        'source ~/.bash_profile',
+        'node -v',
         'pm2 startOrRestart proc.json'
 
       ].join(' && '))
