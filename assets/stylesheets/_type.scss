@@ -58,7 +58,7 @@ h3 {
 }
 
 p {
-  margin-bottom: $font-size-base;
+  margin-bottom: $line-height-computed;
 
   &:last-child {
     margin-bottom: 0;
