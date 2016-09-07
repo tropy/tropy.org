@@ -43,6 +43,14 @@ h3 {
   line-height: 1.5;
   color: $headings-color;
 
+  @media (min-width: $screen-md-min) {
+    width: 80%;
+    margin: {
+      left: auto;
+      right: auto;
+    }
+  }
+
   @media (max-width: $screen-xs-max) {
     font-size: $font-size-large-mobile;
     margin-bottom: 47px; // 64px

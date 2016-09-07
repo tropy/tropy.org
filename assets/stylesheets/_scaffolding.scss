@@ -27,6 +27,7 @@ hr {
   p {
     font-size: $font-size-small;
     margin-bottom: $font-size-small;
+    color: $headings-color;
   }
 }
 
@@ -51,6 +52,17 @@ hr {
   }
 }
 
+.contributor {
+  margin-bottom: 31px;
+
+  @media (min-width: $screen-sm-min) {
+    margin-bottom: 63px;
+  }
+}
+
+
+// Pixel perfect
+// --------------------------------------------------
 
 #tropy-at-a-glance {
 
@@ -69,4 +81,28 @@ hr {
   @media (min-width: $screen-sm-min) {
     padding-bottom: 64px; // 96px
   }
+}
+
+#team {
+  padding-bottom: 27px;
+
+  @media (min-width: $screen-sm-min) {
+    padding-bottom: 11px;
+  }
+
+  h3 {
+    margin: {
+      left: -$space-md; // Prevent line break in Stephen Roberston
+      right: -$space-md;
+    }
+  }
+
+  .lead {
+    margin-bottom: 45px;
+
+    @media (min-width: $screen-sm-min) {
+      margin-bottom: 76px;
+    }
+  }
+
 }
