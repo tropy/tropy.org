@@ -46,7 +46,22 @@ module.exports = shipit => {
         shipit.log('NPM modules installed successfully.')
       }))
 
+  shipit.blTask('pm2', () =>
+    shipit
+      .remote([
+        `cd ${shipit.config.deployTo}`,
+        'pm2 startOrRestart proc.json'
+
+      ].join(' && '))
+      .then(() => {
+        shipit.log('PM2 restarted.')
+      }))
+
   shipit.on('updated', () => {
     shipit.start('npm')
+  })
+
+  shipit.on('cleaned', () => {
+    shipit.start('pm2')
   })
 }
