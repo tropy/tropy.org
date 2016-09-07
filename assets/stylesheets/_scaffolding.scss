@@ -8,10 +8,10 @@ hr {
 }
 
 .section {
-  padding-top: 42px;
+  padding: 42px 0;
 
   @media (min-width: $screen-sm-min) {
-    padding-top: 74px;
+    padding: 74px 0;
   }
 }
 
