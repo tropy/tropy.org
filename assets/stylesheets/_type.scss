@@ -59,6 +59,10 @@ h3 {
 
 p {
   margin-bottom: $font-size-base;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 small,
