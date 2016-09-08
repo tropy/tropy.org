@@ -7,7 +7,7 @@ hr {
   margin: 0;
 }
 
-.section {
+.page-section {
   padding: 42px 0 58px;
 
   @media (min-width: $screen-sm-min) {
@@ -63,6 +63,16 @@ hr {
     @media (min-width: $screen-sm-min) {
       display: block;
     }
+  }
+}
+
+.contributors {
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    padding: 0 3.125%;
+  }
+
+  @media (min-width: $screen-md-min) {
+    padding: 0 12.5%;
   }
 }
 
