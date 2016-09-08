@@ -16,6 +16,7 @@ module.exports = shipit => {
         '.git',
         '.gitignore',
         '.travis.yml',
+        'node_modules',
         'README.md',
         'shipitfile.js',
         'test'
