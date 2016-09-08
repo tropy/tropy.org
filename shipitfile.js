@@ -22,7 +22,7 @@ module.exports = shipit => {
       ],
       rsync: ['--del'],
       key: deploy.key,
-      keepReleases: 2,
+      keepReleases: 4,
       shallowClone: true
     },
 
