@@ -1,7 +1,7 @@
 {
   "@context": {
-    "schema": "https://schema.org",
-    "pending": "https://pending.schema.org"
+    "schema": "https://schema.org/",
+    "pending": "https://pending.schema.org/"
   },
 
   "@id": "https://tropy.org",
