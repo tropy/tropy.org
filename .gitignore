@@ -25,4 +25,5 @@ public/stylesheets
 
 tmp
 config.json
-proc.json
+.identity
+.priv.tar

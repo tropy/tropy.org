@@ -21,6 +21,7 @@ module.exports = shipit => {
         'test'
       ],
       rsync: ['--del'],
+      key: deploy.key,
       keepReleases: 2,
       shallowClone: true
     },
