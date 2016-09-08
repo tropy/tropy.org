@@ -8,6 +8,10 @@ branches:
   only:
   - master
 
+addons:
+  ssh_known_hosts:
+  - tropy.org
+
 install:
 - npm install --silent
 
