@@ -23,7 +23,7 @@ app
   .set('view engine', 'njk')
 
   .use(require('compression')())
-  //.use(require('serve-favicon')(join(__dirname, 'public', 'favicon.ico')))
+  .use(require('serve-favicon')(join(paths.public, 'favicon.ico')))
 
 if (app.get('env') !== 'test') {
   app.use(require('morgan')('dev'))
