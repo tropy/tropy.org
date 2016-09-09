@@ -8,10 +8,10 @@ hr {
 }
 
 .page-section {
-  padding: 42px 0 58px;
+  padding: 42px 0 34px;
 
   @media (min-width: $screen-sm-min) {
-    padding: 74px 0 90px;
+    padding: 74px 0 66px;
   }
 }
 
@@ -30,7 +30,6 @@ hr {
 
   p {
     font-size: $font-size-small;
-    margin-bottom: $font-size-small;
     color: $headings-color;
 
     strong {
@@ -80,7 +79,7 @@ hr {
   margin-bottom: 31px;
 
   @media (min-width: $screen-sm-min) {
-    margin-bottom: 63px;
+    margin-bottom: 55px;
   }
 }
 
@@ -114,7 +113,7 @@ hr {
   padding-bottom: 27px;
 
   @media (min-width: $screen-sm-min) {
-    padding-bottom: 27px;
+    padding-bottom: 11px;
   }
 
   h3 {
