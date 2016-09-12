@@ -1,3 +1,5 @@
-<h1>{{ message }}</h1>
-<h2>{{ error.status }}</h2>
-<pre>{{ error.stack }}</pre>
+{% if error.status == 404 %}
+  {% include "404.njk" %}
+{% else %}
+  {% include "500.njk" %}
+{% endif %}
