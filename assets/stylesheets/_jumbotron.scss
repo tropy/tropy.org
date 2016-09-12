@@ -9,7 +9,7 @@
   @media (min-width: $screen-sm-min) {
     height: 605px;
     padding: $space-xxl 0;
-    background: url(#{image-path("key-visual.svg")}) no-repeat center bottom;
+    background: url(image-path("key-visual.svg")) no-repeat center bottom;
     background-size: 3000px 340px;
     margin-bottom: $jumbotron-padding; // 96px
   }
