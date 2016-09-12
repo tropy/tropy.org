@@ -18,7 +18,7 @@
   },
   "scripts": {
     "deploy": "shipit production deploy",
-    "lint": "eslint app.js routes/*.js bin/*",
+    "lint": "eslint app.js routes/*.js bin/* && sass-lint -v",
     "pretest": "npm run lint --silent",
     "test": "mocha test/**/*_test.js",
     "start": "node ./bin/www"
@@ -40,6 +40,7 @@
     "eslint": "^3.3.1",
     "html-validator": "^2.0.1",
     "mocha": "^3.0.2",
+    "sass-lint": "^1.9.1",
     "shipit-cli": "^1.4.1",
     "shipit-deploy": "^2.2.0"
   }
