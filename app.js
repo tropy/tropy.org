@@ -59,7 +59,8 @@ app
 // Error Handlers
 
 if (app.get('env') === 'development') {
-  app.use((err, req, res) => {
+  // eslint-disable-next-line no-unused-vars
+  app.use((err, req, res, next) => {
     res.status(err.status || 500)
     res.render('error', {
       message: err.message,
@@ -68,7 +69,8 @@ if (app.get('env') === 'development') {
   })
 }
 
-app.use((err, req, res) => {
+// eslint-disable-next-line no-unused-vars
+app.use((err, req, res, next) => {
   res.status(err.status || 500)
   res.render('error', {
     message: err.message,
