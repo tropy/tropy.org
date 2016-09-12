@@ -1,5 +1,21 @@
-{% if error.status == 404 %}
-  {% include "404.njk" %}
-{% else %}
-  {% include "500.njk" %}
-{% endif %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ error.status }} {{message}}</title>
+  </head>
+  <body>
+
+    <h1>{{ message }}</h1>
+    <h2>{{ error.status }}</h2>
+
+    {% if error.status == 404 %}
+
+    {% else %}
+
+    {% endif %}
+
+    <pre>{{ error.stack }}</pre>
+
+  </body>
+</html>
