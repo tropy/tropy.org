@@ -7,7 +7,7 @@
   padding-top: 40px; // 64px
 
   @media (min-width: $screen-sm-min) {
-    height: 659px;
+    height: 605px;
     padding: $space-xxl 0;
     background: url(#{image-path("key-visual.svg")}) no-repeat center bottom;
     background-size: 3000px 340px;
@@ -16,12 +16,12 @@
 
   .tropy-icon {
     display: block;
-    margin: 0 auto 44px;
+    margin: 0 auto 48px;
 
     @media (max-width: $screen-xs-max) {
       width: 144px;
       height: auto;
-      margin-bottom: 32px; // 42px proportionally to desktop version
+      margin-bottom: 34px; // 42px proportionally to desktop version
     }
   }
 
@@ -31,21 +31,11 @@
       weight: 300;
     }
     line-height: $headings-line-height;
-    margin-bottom: 26px;
+    margin-bottom: 28px;
 
     @media (min-width: $screen-sm-min) {
       font-size: $jumbotron-font-size;
-      margin-bottom: 39px;
-    }
-
-    small {
-      display: block;
-      font-size: 80%;
-      line-height: $line-height-base;
-
-      @media (min-width: $screen-sm-min) {
-        font-size: 60%;
-      }
+      margin-bottom: 41px;
     }
   }
 
@@ -60,7 +50,7 @@
 
   hr {
     margin: {
-      top: 58px;
+      top: 60px;
       bottom: 0;
     }
   }

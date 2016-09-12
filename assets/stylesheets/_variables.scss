@@ -89,7 +89,7 @@ $line-height-computed:    floor(($font-size-base * $line-height-base)) !default;
 //** By default, this inherits from the `<body>`.
 $headings-font-family:    "HelveticaNeue-Light", "Helvetica Neue Light", $font-family-sans-serif;
 $headings-font-weight:    300;
-$headings-line-height:    1.3;
+$headings-line-height:    1.1 !default;
 $headings-color:          $blue-gray-dark;
 
 

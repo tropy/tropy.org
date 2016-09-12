@@ -8,10 +8,10 @@ hr {
 }
 
 .page-section {
-  padding: 42px 0 34px;
+  padding: 48px 0 34px;
 
   @media (min-width: $screen-sm-min) {
-    padding: 74px 0 66px;
+    padding: 72px 0 66px;
   }
 }
 
@@ -25,7 +25,7 @@ hr {
   img {
     max-width: 100%;
     height: auto;
-    margin-bottom: 17px;
+    margin-bottom: 19px;
   }
 
   p {
@@ -76,10 +76,10 @@ hr {
 }
 
 .contributor {
-  margin-bottom: 31px;
+  margin-bottom: 33px;
 
   @media (min-width: $screen-sm-min) {
-    margin-bottom: 55px;
+    margin-bottom: 57px;
   }
 }
 
@@ -110,24 +110,16 @@ hr {
 }
 
 #team {
-  padding-bottom: 27px;
+  padding-bottom: 25px;
 
   @media (min-width: $screen-sm-min) {
-    padding-bottom: 11px;
+    padding-bottom: 9px;
   }
 
   h3 {
     margin: {
       left: -$space-md; // Prevent line break in Stephen Roberston
       right: -$space-md;
-    }
-  }
-
-  .lead {
-    margin-bottom: 45px;
-
-    @media (min-width: $screen-sm-min) {
-      margin-bottom: 76px;
     }
   }
 }
