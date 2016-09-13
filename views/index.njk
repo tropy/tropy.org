@@ -5,11 +5,6 @@
     <title>{{ title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/stylesheets/style.css" />
-    {% block head %}
-    <script type="application/ld+json">
-      {%- include "../public/tropy.jsonld" -%}
-    </script>
-    {% endblock %}
   </head>
   <body>
     <header>
@@ -28,6 +23,7 @@
     </header>
     <main>
       {% block main %}
+      <script type="application/ld+json">{%- include "../public/tropy.jsonld" -%}</script>
       <div class="jumbotron">
         <div class="container">
           <img class="tropy-icon" src="images/tropy-icon-large.svg" width="288" height="248" alt="Tropy">
