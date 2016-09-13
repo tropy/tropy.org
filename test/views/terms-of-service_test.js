@@ -1,6 +1,5 @@
 'use strict'
 
-
 const app = require('../../app')
 const validate = require('html-validator')
 
@@ -30,4 +29,3 @@ describe('GET /', () => {
   })
 
 })
-
