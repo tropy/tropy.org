@@ -50,7 +50,7 @@ app
 
   // Catch 404
   .use((req, res, next) => {
-    const err = new Error('Not Found')
+    const err = new Error('You took a wrong turn! Follow the thread back to safety.')
     err.status = 404
     next(err)
   })

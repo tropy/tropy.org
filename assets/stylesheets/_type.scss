@@ -14,6 +14,11 @@ h1 {
     font-size: $font-size-h1-mobile;
     margin-bottom: $font-size-large-mobile;
   }
+
+  &.error-message {
+    font-size: $font-size-h2;
+    margin-top: ($space-max - 16px);
+  }
 }
 
 h2 {
