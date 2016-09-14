@@ -7,7 +7,7 @@
   padding-top: 40px; // 64px
 
   @media (min-width: $screen-sm-min) {
-    height: 605px;
+    height: 681px;
     padding: $space-xxl 0;
     background: url(image-path("key-visual.svg")) no-repeat center bottom;
     background-size: 3000px 340px;
@@ -25,17 +25,39 @@
     }
   }
 
+  p {
+    font-weight: 300;
+  }
+
   .lead {
-    font: {
-      size: 20px;
-      weight: 300;
-    }
+    font-size: 20px;
     line-height: $headings-line-height;
-    margin-bottom: 28px;
+    margin-bottom: 17px;
 
     @media (min-width: $screen-sm-min) {
       font-size: $jumbotron-font-size;
-      margin-bottom: 41px;
+      margin-bottom: 25px;
+    }
+  }
+
+  .available-soon {
+    font-size: $font-size-base;
+    font-weight: 200;
+
+    @media (min-width: $screen-sm-min) {
+      font-size: 20px;
+    }
+
+    span {
+      display: inline-block;
+      line-height: 1;
+      border: 1px solid $text-color;
+      padding: 7px 11px;
+      border-radius: 3px;
+
+      @media (min-width: $screen-sm-min) {
+        padding: 11px 15px;
+      }
     }
   }
 
@@ -50,7 +72,7 @@
 
   hr {
     margin: {
-      top: 60px;
+      top: 64px;
       bottom: 0;
     }
   }
