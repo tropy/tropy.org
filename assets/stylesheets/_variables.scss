@@ -29,6 +29,7 @@ $gray:                   lighten($gray-base, 33.5%) !default; // #555
 $gray-light:             lighten($gray-base, 46.7%) !default; // #777
 $gray-lighter:           #e6e6e6; // 10%
 $gray-lightest:          #f6f6f6; // 4%
+$white:                  #fff;
 
 $brand-primary:         #5c93e5;
 $brand-success:         #5cb85c !default;
@@ -37,8 +38,8 @@ $brand-warning:         #f0ad4e !default;
 $brand-danger:          #d9534f !default;
 
 $blue-darkest: #000933;
-$blue-gray: mix(white, $blue-darkest, 40%);
-$blue-gray-dark: mix(white, $blue-darkest, 24%);
+$blue-gray: mix($white, $blue-darkest, 40%);
+$blue-gray-dark: mix($white, $blue-darkest, 24%);
 
 //== Scaffolding
 //
@@ -260,7 +261,7 @@ $cursor-disabled:                not-allowed !default;
 //** Background for the dropdown menu.
 $dropdown-bg:                    #fff !default;
 //** Dropdown menu `border-color`.
-$dropdown-border:                rgba(0, 0, 0 , .15) !default;
+$dropdown-border:                rgba(0, 0, 0 , 0.15) !default;
 //** Dropdown menu `border-color` **for IE8**.
 $dropdown-fallback-border:       #ccc !default;
 //** Divider color for between dropdown items.
@@ -549,7 +550,7 @@ $tooltip-max-width:           200px !default;
 $tooltip-color:               #fff !default;
 //** Tooltip background color
 $tooltip-bg:                  #000 !default;
-$tooltip-opacity:             .9 !default;
+$tooltip-opacity:             0.9 !default;
 
 //** Tooltip arrow width
 $tooltip-arrow-width:         5px !default;
@@ -566,7 +567,7 @@ $popover-bg:                          #fff !default;
 //** Popover maximum width
 $popover-max-width:                   276px !default;
 //** Popover border color
-$popover-border-color:                rgba(0, 0, 0, .2) !default;
+$popover-border-color:                rgba(0, 0, 0, 0.2) !default;
 //** Popover fallback border color
 $popover-fallback-border-color:       #ccc !default;
 
@@ -624,14 +625,14 @@ $modal-title-line-height:     $line-height-base !default;
 //** Background color of modal content area
 $modal-content-bg:                             #fff !default;
 //** Modal content border color
-$modal-content-border-color:                   rgba(0, 0, 0, .2) !default;
+$modal-content-border-color:                   rgba(0, 0, 0, 0.2) !default;
 //** Modal content border color **for IE8**
 $modal-content-fallback-border-color:          #999 !default;
 
 //** Modal backdrop background color
 $modal-backdrop-bg:           #000 !default;
 //** Modal backdrop opacity
-$modal-backdrop-opacity:      .5 !default;
+$modal-backdrop-opacity:      0.5 !default;
 //** Modal header border color
 $modal-header-border-color:   #e5e5e5 !default;
 //** Modal footer border color
@@ -829,11 +830,11 @@ $breadcrumb-separator:          "/" !default;
 //
 //##
 
-$carousel-text-shadow:                        0 1px 2px rgba(0, 0, 0, .6) !default;
+$carousel-text-shadow:                        0 1px 2px rgba(0, 0, 0, 0.6) !default;
 
 $carousel-control-color:                      #fff !default;
 $carousel-control-width:                      15% !default;
-$carousel-control-opacity:                    .5 !default;
+$carousel-control-opacity:                    0.5 !default;
 $carousel-control-font-size:                  20px !default;
 
 $carousel-indicator-active-bg:                #fff !default;

@@ -8,7 +8,7 @@ h1 {
     weight: 200;
   }
   text-align: center;
-  margin: 0 0 $space-lg 0;
+  margin: 0 0 $space-lg;
 
   @media (max-width: $screen-xs-max) {
     font-size: $font-size-h1-mobile;
@@ -23,7 +23,7 @@ h1 {
 
 h2 {
   text-align: center;
-  margin: 8px 0 57px 0;
+  margin: 8px 0 57px;
 
   @media (min-width: $screen-sm-min) {
     font: {
@@ -34,12 +34,12 @@ h2 {
 
   @media (max-width: $screen-xs-max) {
     font-size: 28px; // ~2/3
-    margin: 6px 0 43px 0;
+    margin: 6px 0 43px;
   }
 }
 
 h3 {
-  margin: 0 0 ($font-size-base / 2) 0;
+  margin: 0 0 ($font-size-base / 2);
 }
 
 .lead {

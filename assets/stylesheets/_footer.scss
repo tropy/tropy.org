@@ -11,35 +11,35 @@ footer {
     padding: $space-xxl 0;
     text-align: left;
   }
+}
 
-  .footer-nav {
-    margin-top: 18px;
-    line-height: $space-xl;
+.footer-nav {
+  margin-top: 18px;
+  line-height: $space-xl;
+
+  @media (min-width: $screen-sm-min) {
+    margin-top: 0;
+    line-height: $space-xxl;
+    float: right;
+  }
+
+  a {
+    color: $blue-gray;
+    font-size: $font-size-small;
 
     @media (min-width: $screen-sm-min) {
-      margin-top: 0;
-      line-height: $space-xxl;
-      float: right;
+      font-size: $font-size-base;
     }
 
-    a {
-      color: $blue-gray;
-      font-size: $font-size-small;
+    &:hover {
+      color: inherit;
+    }
 
-      @media (min-width: $screen-sm-min) {
-        font-size: $font-size-base;
-      }
+    & + a {
+      margin-left: ($space-lg - 4px); // 4px white-space
 
-      &:hover {
-        color: inherit;
-      }
-
-      & + a {
-        margin-left: ($space-lg - 4px); // 4px white-space
-
-        @media (min-width: $screen-md-min) {
-          margin-left: ($grid-gutter-width - 4px); // 4px white-space
-        }
+      @media (min-width: $screen-md-min) {
+        margin-left: ($grid-gutter-width - 4px); // 4px white-space
       }
     }
   }
