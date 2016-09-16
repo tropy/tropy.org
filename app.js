@@ -4,7 +4,7 @@ const express = require('express')
 const { join, resolve } = require('path')
 const njk = require('nunjucks')
 const routes = require('./routes/index')
-// const { analytics } = require('./config')
+const { analytics } = require('./config')
 
 const app = express()
 
@@ -31,7 +31,7 @@ app
     next()
   })
 
-// app.locals.ga = analytics.google
+app.locals.ga = analytics.google
 
 if (app.get('env') !== 'test') {
   app.use(require('morgan')('dev'))
