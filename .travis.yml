@@ -22,12 +22,12 @@ before_script:
   -in .priv.tar.enc
   -out .priv.tar
   -d
+- tar xvf .priv.tar
 
 script:
 - npm test
 
 after_success:
-- tar xvf .priv.tar
 - npm run deploy
 
 notifications:
