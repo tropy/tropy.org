@@ -4,6 +4,7 @@ const express = require('express')
 const { join, resolve } = require('path')
 const njk = require('nunjucks')
 const routes = require('./routes/index')
+const { analytics } = require('./config')
 
 const app = express()
 
@@ -24,6 +25,13 @@ app
 
   .use(require('compression')())
   .use(require('serve-favicon')(join(paths.public, 'favicon.ico')))
+
+  .use((req, res, next) => {
+    res.locals.track = !req.headers.dnt
+    next()
+  })
+
+app.locals.ga = analytics.google
 
 if (app.get('env') !== 'test') {
   app.use(require('morgan')('dev'))
