@@ -3,6 +3,7 @@
 module.exports = shipit => {
   require('shipit-deploy')(shipit)
 
+  const { join } = require('path')
   const { deploy } = require('./config.json')
 
   shipit.initConfig({
@@ -61,11 +62,20 @@ module.exports = shipit => {
         shipit.log('PM2 restarted.')
       }))
 
+  shipit.blTask('config', () =>
+    shipit.local(
+      `cp ${join(__dirname, 'config.json')} ${shipit.config.workspace}`
+    ))
+
   shipit.on('updated', () => {
     shipit.start('npm')
   })
 
   shipit.on('cleaned', () => {
     shipit.start('pm2')
+  })
+
+  shipit.on('fetched', () => {
+    shipit.start('config')
   })
 }
