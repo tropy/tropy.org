@@ -15,16 +15,18 @@ addons:
 install:
 - npm install --silent
 
-script:
-- npm test
-
-after_success:
+before_script:
 - openssl aes-256-cbc
   -K $encrypted_6232c291394f_key
   -iv $encrypted_6232c291394f_iv
   -in .priv.tar.enc
   -out .priv.tar
   -d
+
+script:
+- npm test
+
+after_success:
 - tar xvf .priv.tar
 - npm run deploy
 
