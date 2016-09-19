@@ -27,3 +27,6 @@ tmp
 config.json
 .identity
 .priv.tar
+ghost/data
+ghost/images
+ghost/apps
