@@ -4,7 +4,13 @@ const express = require('express')
 const { join, resolve } = require('path')
 const njk = require('nunjucks')
 const routes = require('./routes/index')
-const { analytics } = require('./config')
+
+try {
+  var analytics = require('./config').analytics
+} catch (_) {
+  // Ignore missing config...
+  analytics = {}
+}
 
 const app = express()
 
