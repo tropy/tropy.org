@@ -26,7 +26,7 @@ module.exports = {
   },
 
   development: {
-    url: 'http://localhost:8888/blog',
+    url: 'http://localhost:3000/blog',
 
     database: {
       client: 'sqlite3',

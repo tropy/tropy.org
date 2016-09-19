@@ -30,6 +30,12 @@ app
     next()
   })
 
+  .all('/blog*', (req, res, next) => {
+    req.ghost = true
+    next()
+  })
+
+
 try {
   app.locals.ga = require('./config').analytics.google
 
@@ -61,8 +67,11 @@ app
 
   .use('/', routes)
 
-  // Catch 404
   .use((req, res, next) => {
+    // Let Ghost handle it!
+    if (req.ghost) return next()
+
+    // Catch 404
     const err = new Error('You took a wrong turn! Follow the thread back to safety.')
     err.status = 404
     next(err)
