@@ -40,7 +40,8 @@ module.exports = shipit => {
     production: {
       servers: `${deploy.user}@${deploy.host}`,
       npm: {
-        args: '--production --silent'
+        args: '--production --silent',
+        env: 'GHOST_NODE_VERSION_CHECK=false'
       }
     }
   })
@@ -51,7 +52,7 @@ module.exports = shipit => {
         `cd ${shipit.releasePath}`,
         'source ~/.bash_profile',
         'node -v',
-        `npm install ${shipit.config.npm.args}`
+        `${shipit.config.npm.env} npm install ${shipit.config.npm.args}`
 
       ].join(' && '))
       .then(() => {
