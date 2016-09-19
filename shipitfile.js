@@ -2,6 +2,7 @@
 
 module.exports = shipit => {
   require('shipit-deploy')(shipit)
+  require('shipit-shared')(shipit)
 
   const { join } = require('path')
   const { deploy } = require('./config.json')
@@ -25,7 +26,15 @@ module.exports = shipit => {
       rsync: ['--del'],
       key: deploy.key,
       keepReleases: 4,
-      shallowClone: true
+      shallowClone: true,
+      shared: {
+        overwrite: true,
+        dirs: [
+          'ghost/apps',
+          'ghost/data',
+          'ghost/images',
+        ]
+      }
     },
 
     production: {

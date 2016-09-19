@@ -43,6 +43,7 @@
     "mocha": "^3.0.2",
     "sass-lint": "^1.9.1",
     "shipit-cli": "^1.4.1",
-    "shipit-deploy": "^2.2.0"
+    "shipit-deploy": "^2.2.0",
+    "shipit-shared": "^4.4.1"
   }
 }
