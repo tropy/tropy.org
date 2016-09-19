@@ -13,7 +13,6 @@ router.get('/', (req, res) => {
 router.get('/terms-of-service', (req, res) => {
   res.render('terms-of-service', {
     path: req.path,
-    layout: 'index.njk',
     title: 'Tropy · Terms of Service'
   })
 })
