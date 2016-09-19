@@ -44,5 +44,5 @@ module.exports = {
     paths: {
       contentPath: __dirname
     }
-  },
+  }
 }
