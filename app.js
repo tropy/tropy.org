@@ -5,13 +5,6 @@ const { join, resolve } = require('path')
 const njk = require('nunjucks')
 const routes = require('./routes/index')
 
-try {
-  var analytics = require('./config').analytics
-} catch (_) {
-  // Ignore missing config...
-  analytics = {}
-}
-
 const app = express()
 
 const paths = {
@@ -37,7 +30,13 @@ app
     next()
   })
 
-app.locals.ga = analytics.google
+try {
+  app.locals.ga = require('./config').analytics.google
+
+} catch (_) {
+  // Ignore missing config!
+}
+
 
 if (app.get('env') !== 'test') {
   app.use(require('morgan')('dev'))
