@@ -11,12 +11,16 @@ const paths = {
   assets: resolve(__dirname, 'assets'),
   public: resolve(__dirname, 'public'),
   views: resolve(__dirname, 'views'),
+  ghost: resolve(__dirname, 'ghost', 'themes', 'tropy'),
   twbs: resolve(__dirname, 'node_modules', 'bootstrap-sass', 'assets')
 }
 
 app
   .engine('hbs', hbs.express4({
-    partialsDir: join(paths.views, 'partials'),
+    partialsDir: [
+      join(paths.views, 'partials'),
+      join(paths.ghost, 'partials'),
+    ],
     layoutsDir: join(paths.views, 'layouts'),
     defaultLayout: join(paths.views, 'layouts', 'default.hbs')
   }))
