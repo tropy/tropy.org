@@ -32,7 +32,9 @@ app
     next()
   })
 
-  .all('/blog*', (req, res, next) => {
+  .use('/blog', (req, res, next) => {
+    // eslint-disable-next-line no-console
+    console.log('mark ghost request')
     req.ghost = true
     next()
   })
