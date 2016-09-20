@@ -1,2 +1,3 @@
 User-agent: *
-Disallow:
+Sitemap: https://tropy.org/blog/sitemap.xml
+Disallow: /blog/ghost/
