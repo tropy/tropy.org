@@ -5,7 +5,7 @@ const { join } = require('path')
 module.exports = {
 
   production: {
-    url: 'https://tropy.org/blog',
+    url: 'http://tropy.org/blog',
     mail: {},
     database: {
       client: 'sqlite3',
