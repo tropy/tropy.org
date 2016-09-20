@@ -5,13 +5,6 @@ const { join, resolve } = require('path')
 const hbs = require('express-hbs')
 const routes = require('./routes/index')
 
-try {
-  var analytics = require('./config').analytics
-} catch (_) {
-  // Ignore missing config...
-  analytics = {}
-}
-
 const app = express()
 
 const paths = {
@@ -39,7 +32,19 @@ app
     next()
   })
 
-app.locals.ga = analytics.google
+  .all('/blog*', (req, res, next) => {
+    req.ghost = true
+    next()
+  })
+
+
+try {
+  app.locals.ga = require('./config').analytics.google
+
+} catch (_) {
+  // Ignore missing config!
+}
+
 
 if (app.get('env') !== 'test') {
   app.use(require('morgan')('dev'))
@@ -64,8 +69,11 @@ app
 
   .use('/', routes)
 
-  // Catch 404
   .use((req, res, next) => {
+    // Let Ghost handle it!
+    if (req.ghost) return next()
+
+    // Catch 404
     const err = new Error('You took a wrong turn! Follow the thread back to safety.')
     err.status = 404
     next(err)
