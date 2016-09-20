@@ -10,7 +10,6 @@ ghost({
   config: join(__dirname, '..', 'ghost', 'config.js')
 })
   .then(gs => {
-    console.log(gs.config)
     app.use(gs.config.paths.subdir, gs.rootApp)
     gs.start(app)
   })
