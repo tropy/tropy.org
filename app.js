@@ -34,7 +34,7 @@ app
 
   .use('/blog', (req, res, next) => {
     // eslint-disable-next-line no-console
-    console.log('mark ghost request')
+    console.log('mark ghost request', req.headers)
     req.ghost = true
     next()
   })
