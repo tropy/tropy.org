@@ -33,6 +33,7 @@ module.exports = shipit => {
           'ghost/apps',
           'ghost/data',
           'ghost/images',
+          'ghost/storage'
         ]
       }
     },

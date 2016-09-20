@@ -30,3 +30,4 @@ config.json
 ghost/apps
 ghost/data
 ghost/images
+ghost/storage
