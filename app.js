@@ -33,23 +33,26 @@ app
   })
 
   .use('/blog', (req, res, next) => {
-    // eslint-disable-next-line no-console
-    console.log('mark ghost request', req.headers)
     req.ghost = true
     next()
   })
 
 
-try {
-  app.locals.ga = require('./config').analytics.google
+switch (app.get('env')) {
+case 'production':
+  app.use(require('morgan')('combined'))
 
-} catch (_) {
-  // Ignore missing config!
-}
+  try {
+    app.locals.ga = require('./config').analytics.google
+  } catch (_) {
+    // Ignore missing config!
+  }
 
+  break
 
-if (app.get('env') !== 'test') {
+case 'development':
   app.use(require('morgan')('dev'))
+  break
 }
 
 app
