@@ -26,7 +26,53 @@
 }
 
 .post-content {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0 0 $font-size-base;
+    padding-top: $font-size-base;
+    font: {
+      family: "HelveticaNeue-Thin", "Helvetica Neue Thin", $font-family-sans-serif;
+      weight: 200;
+    }
+
+    @media (min-width: $screen-sm-min) {
+      margin-bottom: $post-font-size;
+      padding-top: $post-font-size;
+    }
+  }
+
+  h2 {
+    font-size: 32px;
+
+    @media (min-width: $screen-sm-min) {
+      font-size: 48px;
+    }
+  }
+
+  h3 {
+    font-size: 24px;
+
+    @media (min-width: $screen-sm-min) {
+      font-size: 36px;
+    }
+  }
+
+  h4 {
+    font-size: 16px;
+
+    @media (min-width: $screen-sm-min) {
+      font-size: 24px;
+    }
+  }
+
   p {
+    font-size: $font-size-base;
+    margin: 0 0 $line-height-computed;
+
     @media (min-width: $screen-sm) {
       font-size: $post-font-size;
       line-height: $post-line-height;

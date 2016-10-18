@@ -30,12 +30,12 @@
 
 @import "header";
 @import "footer";
+@import "type";
 
 
 // Blog
 // --------------------------------------------------
 
 @import "blog/scaffolding";
-@import "type";
 @import "blog/blog-nav";
 @import "blog/post";
