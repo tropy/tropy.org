@@ -25,12 +25,40 @@
   }
 }
 
-.post {
+.post-content {
   p {
     @media (min-width: $screen-sm) {
       font-size: $post-font-size;
       line-height: $post-line-height;
       margin: 0 0 $post-line-height;
+    }
+  }
+
+  img {
+    display: block;
+    position: relative;
+    height: auto;
+    padding: 9px 0 6px;
+
+    @media (max-width: $screen-xs-max) {
+      width: calc(100% + #{$grid-gutter-width});
+      margin-left: -$grid-gutter-width / 2;
+    }
+
+    @media (min-width: $screen-sm-min) {
+      max-width: 126%;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 12px 0 10px;
+
+      .ie-9 & {
+        @media (min-width: $screen-sm-min) {
+          margin: auto;
+          max-width: 100%;
+          left: 0;
+          transform: none;
+        }
+      }
     }
   }
 }
