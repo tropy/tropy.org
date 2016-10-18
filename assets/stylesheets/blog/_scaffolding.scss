@@ -1,0 +1,12 @@
+//
+// Blog scaffolding
+// --------------------------------------------------
+
+.container-fluid {
+  max-width: $blog-container-width;
+
+  @media (min-width: $screen-sm) {
+    padding: 0;
+    width: 80%;
+  }
+}

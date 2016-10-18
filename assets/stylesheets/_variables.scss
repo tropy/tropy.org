@@ -895,3 +895,11 @@ $dl-horizontal-offset:        $component-offset-horizontal !default;
 $dl-horizontal-breakpoint:    $grid-float-breakpoint !default;
 //** Horizontal line color.
 $hr-border:                   $gray-lighter !default;
+
+
+// Blog
+// --------------------------------------------------
+
+$blog-container-width: 750px; // 8 lg columns
+$post-font-size: 18px;
+$post-line-height: 32px;

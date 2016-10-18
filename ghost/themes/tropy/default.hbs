@@ -17,9 +17,13 @@
   <body class="{{body_class}}">
     {{>header}}
 
-    {{>blog-nav}}
+    <main role="main">
+      {{>blog-nav}}
 
-    {{{body}}}
+      <div class="container-fluid">
+        {{{body}}}
+      </div>
+    </main>
 
     {{>footer}}
     {{>analytics}}
