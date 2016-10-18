@@ -16,6 +16,7 @@
 
 // Core CSS
 @import "bootstrap/scaffolding";
+@import "bootstrap/type";
 @import "bootstrap/grid";
 @import "bootstrap/navs";
 
@@ -35,5 +36,6 @@
 // --------------------------------------------------
 
 @import "blog/scaffolding";
+@import "type";
 @import "blog/blog-nav";
 @import "blog/post";

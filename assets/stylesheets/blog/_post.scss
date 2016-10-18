@@ -2,10 +2,26 @@
 // Post
 // --------------------------------------------------
 
+.post-header {
+  .post-template & {
+    margin-top: 56px; // 96px
+
+    @media (min-width: $screen-sm-min) {
+      margin-top: 121px; // 144px
+    }
+  }
+}
+
+.post-title {
+  margin-bottom: $space-md;
+}
+
 .post {
   p {
-    font-size: $post-font-size;
-    line-height: $post-line-height;
-    margin: 0 0 $post-line-height;
+    @media (min-width: $screen-sm) {
+      font-size: $post-font-size;
+      line-height: $post-line-height;
+      margin: 0 0 $post-line-height;
+    }
   }
 }
