@@ -1,0 +1,33 @@
+//
+// Blog nav
+// --------------------------------------------------
+
+.blog-nav {
+  text-align: center;
+  border-top: 1px solid $gray-lighter;
+  border-bottom: 1px solid $gray-lighter;
+
+  .nav {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+  }
+
+  li {
+    float: left;
+
+    &.active {
+      a {
+        color: $blue-gray-dark;
+      }
+    }
+  }
+
+  a {
+    color: $blue-gray-light;
+
+    &:hover {
+      color: $blue-gray-dark;
+    }
+  }
+}

@@ -17,6 +17,7 @@
 // Core CSS
 @import "bootstrap/scaffolding";
 @import "bootstrap/grid";
+@import "bootstrap/navs";
 
 // Utility classes
 @import "bootstrap/utilities";
@@ -27,3 +28,9 @@
 // --------------------------------------------------
 
 @import "header";
+
+
+// Blog
+// --------------------------------------------------
+
+@import "blog/blog-nav";

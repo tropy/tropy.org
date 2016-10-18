@@ -40,6 +40,7 @@ $brand-danger:          #d9534f !default;
 $blue-darkest: #000933;
 $blue-gray: mix($white, $blue-darkest, 40%);
 $blue-gray-dark: mix($white, $blue-darkest, 24%);
+$blue-gray-light: mix($white, $blue-darkest, 60%);
 
 //== Scaffolding
 //
@@ -446,8 +447,8 @@ $navbar-inverse-toggle-border-color:        #333 !default;
 //##
 
 //=== Shared nav styles
-$nav-link-padding:                          10px 15px !default;
-$nav-link-hover-bg:                         $gray-lighter !default;
+$nav-link-padding:                          19px 16px;
+$nav-link-hover-bg:                         transparent;
 
 $nav-disabled-link-color:                   $gray-light !default;
 $nav-disabled-link-hover-color:             $gray-light !default;
