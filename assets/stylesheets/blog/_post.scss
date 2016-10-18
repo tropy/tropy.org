@@ -13,7 +13,16 @@
 }
 
 .post-title {
-  margin-bottom: $space-md;
+  margin-bottom: $space-sm;
+}
+
+.post-meta {
+  text-align: center;
+  margin-bottom: 46px; // 64px
+
+  a {
+    color: inherit;
+  }
 }
 
 .post {
@@ -25,3 +34,5 @@
     }
   }
 }
+
+
