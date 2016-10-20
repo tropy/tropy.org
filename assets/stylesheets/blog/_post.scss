@@ -116,6 +116,13 @@
       margin-bottom: 0;
     }
   }
+
+  blockquote {
+    border-left-width: $space-min;
+    padding: 0 0 0 $space-lg;
+    margin: 0 0 $post-line-height (-$space-lg - 4px);
+  }
+
 }
 
 
