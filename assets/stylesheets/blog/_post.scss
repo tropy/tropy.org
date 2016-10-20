@@ -42,6 +42,15 @@
 }
 
 .post-content {
+  font-size: $font-size-base;
+  margin-bottom: 90px;
+
+  @media (min-width: $screen-sm-min) {
+    font-size: $post-font-size;
+    line-height: $line-height-post;
+    margin-bottom: 138px; // 144px
+  }
+
   h1,
   h2,
   h3,
@@ -84,12 +93,9 @@
   }
 
   p {
-    font-size: $font-size-base;
     margin: 0 0 $line-height-post-xs;
 
     @media (min-width: $screen-sm) {
-      font-size: $post-font-size;
-      line-height: $line-height-post;
       margin: 0 0 $line-height-post;
     }
   }
