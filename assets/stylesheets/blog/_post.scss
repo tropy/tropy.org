@@ -32,14 +32,14 @@
   h4,
   h5,
   h6 {
-    margin: ($font-size-base + $line-height-computed) 0 $font-size-base;
+    margin: ($font-size-base + $line-height-post-xs) 0 $font-size-base;
     font: {
       family: "HelveticaNeue-Thin", "Helvetica Neue Thin", $font-family-sans-serif;
       weight: 200;
     }
 
     @media (min-width: $screen-sm-min) {
-      margin: ($post-font-size + $post-line-height) 0 $post-font-size;
+      margin: ($post-font-size + $line-height-post) 0 $post-font-size;
     }
   }
 
@@ -69,12 +69,12 @@
 
   p {
     font-size: $font-size-base;
-    margin: 0 0 $line-height-computed;
+    margin: 0 0 $line-height-post-xs;
 
     @media (min-width: $screen-sm) {
       font-size: $post-font-size;
-      line-height: $post-line-height;
-      margin: 0 0 $post-line-height;
+      line-height: $line-height-post;
+      margin: 0 0 $line-height-post;
     }
   }
 
@@ -108,8 +108,12 @@
 
   ul,
   ol {
-    margin-bottom: $post-line-height;
+    margin-bottom: $line-height-post-xs;
     padding-left: $space-xxl;
+
+    @media (min-width: $screen-sm-min) {
+      margin-bottom: $line-height-post;
+    }
 
     ul,
     ol {
@@ -120,9 +124,35 @@
   blockquote {
     border-left-width: $space-min;
     padding: 0 0 0 $space-lg;
-    margin: 0 0 $post-line-height (-$space-lg - 4px);
+    margin: 0 0 $line-height-post-xs (-$space-lg - 4px);
+    font-style: italic;
+
+    @media (min-width: $screen-sm-min) {
+      margin-bottom: $line-height-post;
+    }
   }
 
+  code {
+    font-size: $font-size-base;
+    line-height: 1;
+  }
+
+  pre {
+    border-radius: 0;
+    margin-bottom: ($line-height-post-xs + 6px);
+    padding: ($line-height-post / 2);
+    background-clip: padding-box;
+    border-top: 9px solid transparent;
+
+    @media (min-width: $screen-sm-min) {
+      border-top-width: 12px;
+      margin-bottom: ($line-height-post + 10px);
+    }
+
+    code {
+      line-height: inherit;
+    }
+  }
 }
 
 
