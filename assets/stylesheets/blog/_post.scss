@@ -105,6 +105,17 @@
       }
     }
   }
+
+  ul,
+  ol {
+    margin-bottom: $post-line-height;
+    padding-left: $space-xxl;
+
+    ul,
+    ol {
+      margin-bottom: 0;
+    }
+  }
 }
 
 
