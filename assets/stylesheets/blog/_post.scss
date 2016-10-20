@@ -32,16 +32,14 @@
   h4,
   h5,
   h6 {
-    margin: 0 0 $font-size-base;
-    padding-top: $font-size-base;
+    margin: ($font-size-base + $line-height-computed) 0 $font-size-base;
     font: {
       family: "HelveticaNeue-Thin", "Helvetica Neue Thin", $font-family-sans-serif;
       weight: 200;
     }
 
     @media (min-width: $screen-sm-min) {
-      margin-bottom: $post-font-size;
-      padding-top: $post-font-size;
+      margin: ($post-font-size + $post-line-height) 0 $post-font-size;
     }
   }
 
