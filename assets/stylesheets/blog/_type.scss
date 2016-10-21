@@ -31,6 +31,10 @@
 .post-title {
   margin-bottom: $space-md;
 
+  @media (max-width: $screen-xs-max) {
+    margin-bottom: ($space-md * 2 / 3);
+  }
+
   .post-template & {
     margin-bottom: $space-xs;
   }

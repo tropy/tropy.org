@@ -22,11 +22,11 @@ h3 {
 }
 
 h1 {
-  margin: 0 0 $space-lg;
+  margin: 0 0 ($space-lg / 2);
 
   @media (max-width: $screen-xs-max) {
     font-size: $font-size-h1-mobile;
-    margin-bottom: $font-size-large-mobile;
+    margin-bottom: ($font-size-large-mobile / 2);
   }
 
   &.error-message {
