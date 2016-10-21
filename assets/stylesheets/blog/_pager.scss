@@ -25,7 +25,15 @@
 
   .previous,
   .next {
-    position: absolute;
+    @media (min-width: $screen-sm-min) {
+      position: absolute;
+    }
+
+    a {
+      @media (max-width: $screen-xs-max) {
+        float: none;
+      }
+    }
   }
 
   .previous {
@@ -37,8 +45,14 @@
   }
 
   .page-number {
-    display: inline-block;
+    display: block;
     padding: ($pager-padding-vertical + 1px) 0;
     color: $blue-gray-light;
+    margin: $space-xs 0;
+
+    @media (min-width: $screen-sm-min) {
+      display: inline-block;
+      margin: 0;
+    }
   }
 }
