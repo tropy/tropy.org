@@ -4,9 +4,13 @@
 
 .page-header {
   text-align: center;
-  margin: 121px 0 96px;
+  margin: 121px 0 52px;
   padding-bottom: 9px;
   border-width: 2px;
+
+  @media (min-width: $screen-sm-min) {
+    margin-bottom: 77px;
+  }
 }
 
 .post-title {
