@@ -1,0 +1,52 @@
+//
+// Type
+// --------------------------------------------------
+
+.page-header {
+  text-align: center;
+  margin: 121px 0 96px;
+  padding-bottom: 9px;
+  border-width: 2px;
+}
+
+.post-title {
+  margin-bottom: $space-md;
+
+  .post-template & {
+    margin-bottom: $space-xs;
+  }
+
+  a {
+    color: inherit;
+    transition: color 0.3s ease;
+
+    &:hover,
+    &:focus {
+      color: $blue-dark;
+      text-decoration: none;
+    }
+  }
+}
+
+.post-excerpt {
+  margin-bottom: $font-size-small;
+}
+
+.post-meta {
+  text-align: center;
+  //color: $blue-gray-light;
+
+  body & {
+    &:not(.post-template) {
+      font-size: $font-size-small;
+    }
+  }
+
+  .post-template & {
+    margin-bottom: 46px; // 64px
+  }
+
+  a {
+    color: inherit;
+  }
+}

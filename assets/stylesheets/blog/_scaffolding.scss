@@ -10,3 +10,19 @@
     width: 80%;
   }
 }
+
+main {
+  margin-bottom: 77px; // 96px
+
+  @media (min-width: $screen-sm-min) {
+    margin-bottom: 125px; // 144px
+  }
+
+  .post-template & {
+    margin-bottom: 90px;
+
+    @media (min-width: $screen-sm-min) {
+      margin-bottom: 138px;
+    }
+  }
+}

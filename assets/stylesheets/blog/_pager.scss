@@ -1,0 +1,44 @@
+//
+// Post
+// --------------------------------------------------
+
+.pager {
+  position: relative;
+  font-size: $font-size-small;
+  line-height: 1;
+  padding: 19px 0;
+  margin: 0;
+
+  > li {
+    a {
+      color: $pager-color;
+      padding: $pager-padding-vertical $pager-padding-horizontal;
+      transition: color 0.2s ease, border-color 0.2s ease;
+
+      &:hover,
+      &:focus {
+        color: $blue-gray-dark;
+        border-color: $gray-semilighter;
+      }
+    }
+  }
+
+  .previous,
+  .next {
+    position: absolute;
+  }
+
+  .previous {
+    left: 0;
+  }
+
+  .next {
+    right: 0;
+  }
+
+  .page-number {
+    display: inline-block;
+    padding: ($pager-padding-vertical + 1px) 0;
+    color: $blue-gray-light;
+  }
+}

@@ -3,10 +3,14 @@
 // --------------------------------------------------
 
 .post {
-  margin-bottom: 90px;
+  body & {
+    &:not(.post-template) {
+      margin-bottom: 46px;
 
-  @media (min-width: $screen-sm-min) {
-    margin-bottom: 138px; // 144px
+      @media (min-width: $screen-sm-min) {
+        margin-bottom: 71px;
+      }
+    }
   }
 
   .separator {
@@ -28,19 +32,6 @@
   }
 }
 
-.post-title {
-  margin-bottom: $space-sm;
-}
-
-.post-meta {
-  text-align: center;
-  margin-bottom: 46px; // 64px
-
-  a {
-    color: inherit;
-  }
-}
-
 .post-content {
   font-size: $font-size-base;
   margin-bottom: 90px;
@@ -58,37 +49,9 @@
   h5,
   h6 {
     margin: ($font-size-base + $line-height-post-xs) 0 $font-size-base;
-    font: {
-      family: "HelveticaNeue-Thin", "Helvetica Neue Thin", $font-family-sans-serif;
-      weight: 200;
-    }
 
     @media (min-width: $screen-sm-min) {
       margin: ($post-font-size + $line-height-post) 0 $post-font-size;
-    }
-  }
-
-  h2 {
-    font-size: 32px;
-
-    @media (min-width: $screen-sm-min) {
-      font-size: 48px;
-    }
-  }
-
-  h3 {
-    font-size: 24px;
-
-    @media (min-width: $screen-sm-min) {
-      font-size: 36px;
-    }
-  }
-
-  h4 {
-    font-size: 16px;
-
-    @media (min-width: $screen-sm-min) {
-      font-size: 24px;
     }
   }
 
@@ -116,15 +79,6 @@
       left: 50%;
       transform: translateX(-50%);
       padding: 12px 0 10px;
-
-      .ie-9 & {
-        @media (min-width: $screen-sm-min) {
-          margin: auto;
-          max-width: 100%;
-          left: 0;
-          transform: none;
-        }
-      }
     }
   }
 
@@ -177,6 +131,7 @@
   }
 
   hr {
+    border-top-width: 2px;
     margin: 86px 0 84px; // 96px
   }
 }
@@ -221,11 +176,11 @@
 
   .bio,
   .more-posts {
-    margin-bottom: $space-sm;
+    margin-bottom: $font-size-small;
   }
 
   .author-meta {
-    color: $blue-gray-light;
+    font-size: $font-size-small;
   }
 
   .author-location,
@@ -238,10 +193,11 @@
   .author-link {
     a {
       color: inherit;
+      transition: color 0.3s ease;
 
       &:hover {
         text-decoration: none;
-        color: $blue-gray;
+        color: $blue-darkest;
       }
     }
   }

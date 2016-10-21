@@ -9,13 +9,19 @@ h4,
 h5,
 h6 {
   text-align: center;
+  margin: 0;
 }
 
-h1 {
+h1,
+h2,
+h3 {
   font: {
     family: "HelveticaNeue-Thin", "Helvetica Neue Thin", $font-family-sans-serif;
     weight: 200;
   }
+}
+
+h1 {
   margin: 0 0 $space-lg;
 
   @media (max-width: $screen-xs-max) {
@@ -30,22 +36,18 @@ h1 {
 }
 
 h2 {
-  margin: 8px 0 57px;
-
-  @media (min-width: $screen-sm-min) {
-    font: {
-      family: "HelveticaNeue-Thin", "Helvetica Neue Thin", $font-family-sans-serif;
-      weight: 200;
-    }
-  }
-
   @media (max-width: $screen-xs-max) {
-    font-size: 28px; // ~2/3
-    margin: 6px 0 43px;
+    font-size: $font-size-h2-mobile;
   }
 }
 
 h3 {
+  @media (max-width: $screen-xs-max) {
+    font-size: $font-size-h3-mobile;
+  }
+}
+
+h4 {
   margin: 0 0 ($font-size-base / 2);
 }
 
