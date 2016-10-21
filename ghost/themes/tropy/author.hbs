@@ -15,13 +15,13 @@
     {{/if}}
     <div class="author-meta">
       {{#if location}}
-        <span class="author-location">Lives in {{location}}
+        <span class="author-location">Lives in {{location}}</span>
+        <span class="separator hidden-xs"></span>
       {{/if}}
       {{#if website}}
-        <span class="separator hidden-xs"></span>
         <span class="author-link"><a href="{{website}}">{{website}}</a></span>
+        <span class="separator hidden-xs"></span>
       {{/if}}
-      <span class="separator hidden-xs"></span>
       <span class="author-stats">{{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}</span>
     </div>
   </header>
