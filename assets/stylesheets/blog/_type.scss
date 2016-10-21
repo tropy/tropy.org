@@ -40,10 +40,8 @@
   text-align: center;
   //color: $blue-gray-light;
 
-  body & {
-    &:not(.post-template) {
-      font-size: $font-size-small;
-    }
+  body:not(.post-template) & {
+    font-size: $font-size-small;
   }
 
   .post-template & {
