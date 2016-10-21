@@ -526,7 +526,7 @@ $jumbotron-padding:              0;
 $jumbotron-color:                inherit !default;
 $jumbotron-bg:                   #fff;
 $jumbotron-heading-color:        inherit !default;
-$jumbotron-font-size:            40px;
+$jumbotron-font-size:            $font-size-h2;
 $jumbotron-heading-font-size:    ceil(($font-size-base * 4.5)) !default;
 
 
