@@ -1,1 +1,30 @@
 {{!< default}}
+
+{{#author}}
+  <header class="page-header">
+    {{#if image}}
+      <figure class="author-image">
+        <a class="author-image-inner" href="{{url}}" style="background-image: url({{image}})">
+          <span class="visually-hidden">{{name}}’s Picture</span>
+        </a>
+      </figure>
+    {{/if}}
+    <h1 class="author-title">{{name}}</h1>
+    {{#if bio}}
+      <p class="lead">{{bio}}</p>
+    {{/if}}
+    <div class="author-meta">
+      {{#if location}}
+        <span class="author-location">Lives in {{location}}
+      {{/if}}
+      {{#if website}}
+        <span class="separator hidden-xs"></span>
+        <span class="author-link"><a href="{{website}}">{{website}}</a></span>
+      {{/if}}
+      <span class="separator hidden-xs"></span>
+      <span class="author-stats">{{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}</span>
+    </div>
+  </header>
+{{/author}}
+
+{{> loop}}

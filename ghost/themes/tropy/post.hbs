@@ -19,7 +19,7 @@
     <footer class="post-footer">
       {{#author}}
         <figure class="author-image">
-          <a class="author-image-link" href="{{url}}" style="background-image: url({{image}})">
+          <a class="author-image-inner" href="{{url}}" style="background-image: url({{image}})">
             <span class="visually-hidden">{{name}}’s Picture</span>
           </a>
         </figure>
@@ -31,7 +31,7 @@
         {{/if}}
         <div class="author-meta">
           {{#if location}}
-            <span class="auhtor-location">Lives in {{location}}
+            <span class="author-location">Lives in {{location}}
           {{/if}}
           {{#if website}}
             <span class="separator hidden-xs"></span>
