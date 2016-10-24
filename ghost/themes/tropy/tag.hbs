@@ -1,13 +1,19 @@
 {{!< default}}
 
-<header class="page-header">
-  {{#tag}}
-    <h1 class="page-title">{{name}}</h1>
-    <p class="lead">{{{description}}}</p>
-  {{/tag}}
-</header>
+{{#contentFor 'navigation'}}
+{{>navigation}}
+{{/contentFor}}
 
-{{> loop}}
+<div class="container-fluid">
+  <header class="page-header">
+    {{#tag}}
+      <h1 class="page-title">{{name}}</h1>
+      <p class="lead">{{{description}}}</p>
+    {{/tag}}
+  </header>
+
+  {{> loop}}
+</div>
 
 {{#contentFor 'footer'}}
 {{>footer}}

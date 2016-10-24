@@ -18,13 +18,9 @@
     {{>header}}
 
     <main role="main">
-      <div class="container">
-        {{navigation}}
-      </div>
+      {{{block 'navigation'}}}
 
-      <div class="container-fluid">
-        {{{body}}}
-      </div>
+      {{{body}}}
     </main>
 
     {{{block 'footer'}}}

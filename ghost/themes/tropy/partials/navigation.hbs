@@ -1,11 +1,13 @@
-{{#get "tags" limit="all"}}
-  {{#if tags}}
-    <nav class="blog-nav hidden-xs">
-      <ul class="nav">
-        {{#foreach tags}}
-          <li><a href="{{url}}">{{name}}</a></li>
-        {{/foreach}}
-      </ul>
-    </nav>
-  {{/if}}
-{{/get}}
+<div class="container">
+  {{#get "tags" limit="all"}}
+    {{#if tags}}
+      <nav class="blog-nav hidden-xs">
+        <ul class="nav">
+          {{#foreach tags}}
+            <li><a href="{{url}}">{{name}}</a></li>
+          {{/foreach}}
+        </ul>
+      </nav>
+    {{/if}}
+  {{/get}}
+</div>
