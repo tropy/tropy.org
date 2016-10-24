@@ -80,9 +80,8 @@ app
         browsers: 'last 2 versions, ie > 8'
       })
     ],
-    src: (req) => {
-      return join(paths.public, 'stylesheets', req.path)
-    }
+    src: (req) => join(paths.public, 'stylesheets', req.path),
+    inlineSourcemaps: (app.get('env') === 'development')
   }))
 
   .use(express.static(paths.public))
