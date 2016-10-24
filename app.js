@@ -4,6 +4,7 @@ const express = require('express')
 const { join, resolve } = require('path')
 const hbs = require('express-hbs')
 const routes = require('./routes/index')
+const autoprefixer = require('autoprefixer')
 
 const app = express()
 
@@ -68,8 +69,20 @@ app
     ],
     outputStyle: 'compressed',
     indentedSyntax: false,
+    response: false,
     debug: (app.get('env') === 'development'),
     sourceMap: true
+  }))
+
+  .use('/stylesheets', require('postcss-middleware')({
+    plugins: [
+      autoprefixer({
+        browsers: 'last 2 versions, ie > 8'
+      })
+    ],
+    src: (req) => {
+      return join(paths.public, 'stylesheets', req.path)
+    }
   }))
 
   .use(express.static(paths.public))
