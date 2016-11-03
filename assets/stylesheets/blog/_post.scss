@@ -45,7 +45,8 @@
     }
   }
 
-  p {
+  p,
+  figure {
     margin: 0 0 $line-height-post-xs;
 
     @media (min-width: $screen-sm) {
@@ -75,6 +76,21 @@
 
   iframe {
     box-sizing: content-box;
+  }
+
+  figcaption {
+    font: {
+      size: $font-size-small;
+      style: italic;
+    }
+    line-height: $line-height-base;
+    text-align: center;
+    margin-top: 9px;
+
+    @media (min-width: $screen-sm-min) {
+      margin-top: 10px;
+      padding-bottom: 4px;
+    }
   }
 
   ul,
