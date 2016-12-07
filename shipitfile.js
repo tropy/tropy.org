@@ -30,6 +30,7 @@ module.exports = shipit => {
       shared: {
         overwrite: true,
         dirs: [
+          'public/releases',
           'ghost/apps',
           'ghost/data',
           'ghost/images',
