@@ -42,8 +42,7 @@ module.exports = shipit => {
     production: {
       servers: `${deploy.user}@${deploy.host}`,
       npm: {
-        args: '--production --silent',
-        env: 'GHOST_NODE_VERSION_CHECK=false'
+        args: '--production --silent'
       }
     }
   })

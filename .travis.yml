@@ -12,9 +12,6 @@ addons:
   ssh_known_hosts:
   - tropy.org
 
-env:
-  GHOST_NODE_VERSION_CHECK: false
-
 install:
 - npm install --silent
 
