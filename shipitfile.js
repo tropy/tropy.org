@@ -53,7 +53,7 @@ module.exports = shipit => {
         `cd ${shipit.releasePath}`,
         'source ~/.bash_profile',
         'node -v',
-        `${shipit.config.npm.env} npm install ${shipit.config.npm.args}`
+        `npm install ${shipit.config.npm.args}`
 
       ].join(' && '))
       .then(() => {
