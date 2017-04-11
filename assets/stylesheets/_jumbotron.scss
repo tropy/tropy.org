@@ -38,15 +38,18 @@
       margin-bottom: 24px;
       font: {
         size: $jumbotron-font-size;
-        family: "HelveticaNeue-Thin", "Helvetica Neue Thin", $font-family-sans-serif;
+        family: -apple-system, BlinkMacSystemFont, "HelveticaNeue-Thin", "Helvetica Neue Thin", $font-family-sans-serif;
         weight: 200;
       }
     }
   }
 
   .available-soon {
-    font-size: $font-size-base;
-    font-weight: 200;
+    font: {
+      family: $headings-font-family;
+      size: $font-size-base;
+      weight: 300;
+    }
 
     @media (min-width: $screen-sm-min) {
       font-size: 20px;
