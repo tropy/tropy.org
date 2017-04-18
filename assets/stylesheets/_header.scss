@@ -57,8 +57,8 @@
 
 .nav-toggle {
   float: right;
-  padding: 7px $space-md;
-  margin-right: -$space-md;
+  padding: $nav-toggle-padding-vertical $nav-toggle-padding-horizontal;
+  margin-right: -$nav-toggle-padding-horizontal;
   border: 0;
   background: transparent;
 
@@ -72,9 +72,9 @@
 
   .icon-bar {
     display: block;
-    width: 24px;
-    height: 2px;
-    margin-top: 6px;
+    width: $icon-bar-width;
+    height: $icon-bar-height;
+    margin-top: $icon-bar-spacing;
     background: $blue-gray;
 
     &:first-child {
