@@ -12,10 +12,14 @@
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch; // sass-lint:disable-line no-misspelled-properties
   transform: translate3d(25%, 0, 0);
-  transition: transform $mobile-nav-transition;
+  opacity: 0.01;
+  transition: transform $mobile-nav-transition,
+    opacity 0s linear $mobile-nav-transition-duration;
 
   .nav-opened & {
+    opacity: 1;
     transform: translate3d(0, 0, 0);
+    transition: transform $mobile-nav-transition;
   }
 
   &::-webkit-scrollbar {
@@ -44,5 +48,16 @@
     &:focus {
       text-decoration: none;
     }
+  }
+}
+
+.nav-cover {
+  .nav-opened & {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: $nav-toggle-width;
+    bottom: 0;
+    z-index: 1;
   }
 }
