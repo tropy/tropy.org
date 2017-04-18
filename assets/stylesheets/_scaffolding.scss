@@ -2,6 +2,21 @@
 // Scaffolding
 // --------------------------------------------------
 
+.nav-opened {
+  overflow: hidden;
+}
+
+.site-wrapper {
+  background: $body-bg;
+  position: relative;
+  transition: transform $mobile-nav-transition;
+  overflow: hidden; // for the sake of safety
+
+  .nav-opened & {
+    transform: translate3d(calc(-100% + #{$nav-toggle-width}), 0, 0);
+  }
+}
+
 hr {
   margin: 0;
 }

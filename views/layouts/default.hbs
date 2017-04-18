@@ -7,13 +7,16 @@
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
-    {{#block 'header'}}
-    {{>header}}
-    {{/block}}
-    <main>
-      {{{body}}}
-    </main>
-    {{{block 'footer'}}}
+    {{>mobile-nav}}
+    <div class="site-wrapper">
+      {{#block 'header'}}
+      {{>header}}
+      {{/block}}
+      <main>
+        {{{body}}}
+      </main>
+      {{{block 'footer'}}}
+    </div>
     {{>analytics}}
   </body>
 </html>

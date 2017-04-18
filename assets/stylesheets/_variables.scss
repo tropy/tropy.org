@@ -7,15 +7,17 @@ $bootstrap-sass-asset-helper: false !default;
 // Space sizes
 // --------------------------------------------------
 
-$space-min: 4px;
-$space-xs: 8px;
-$space-sm: 12px;
-$space-md: 16px;
-$space-lg: 24px;
-$space-xl: 32px;
-$space-xxl: 48px;
+$space-min:  4px;
+$space-xs:   8px;
+$space-sm:   12px;
+$space-md:   16px;
+$space-lg:   24px;
+$space-xl:   32px;
+$space-xxl:  48px;
 $space-xxxl: 64px;
-$space-max: 96px;
+$space-max:  96px;
+
+$space-thumb: 42px;
 
 
 //== Colors
@@ -905,6 +907,23 @@ $dl-horizontal-offset:        $component-offset-horizontal !default;
 $dl-horizontal-breakpoint:    $grid-float-breakpoint !default;
 //** Horizontal line color.
 $hr-border:                   $gray-lighter !default;
+
+
+// Main header
+// --------------------------------------------------
+
+$icon-bar-width: $space-lg;
+$icon-bar-height: 2px;
+$icon-bar-spacing: 6px;
+$nav-toggle-padding-vertical: 7px;
+$nav-toggle-padding-horizontal: $space-md;
+$nav-toggle-width:      $icon-bar-width + 2 * $nav-toggle-padding-horizontal;
+
+
+// Mobile navigation
+// --------------------------------------------------
+
+$mobile-nav-transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 
 
 // Blog
