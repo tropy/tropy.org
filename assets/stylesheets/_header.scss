@@ -54,6 +54,12 @@
 
   li {
     display: inline;
+
+    &.active {
+      a {
+        color: $blue-gray-light;
+      }
+    }
   }
 
   li + li {
