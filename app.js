@@ -86,6 +86,7 @@ app
 
   .use(express.static(paths.public))
   .use('/images', express.static(join(paths.assets, 'images')))
+  .use('/javascripts', express.static(join(paths.assets, 'javascripts')))
   .use('/fonts', express.static(join(paths.assets, 'fonts')))
 
   .use('/', routes)
