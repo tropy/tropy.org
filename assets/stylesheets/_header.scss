@@ -54,3 +54,31 @@
     }
   }
 }
+
+.nav-toggle {
+  float: right;
+  padding: 7px $space-md;
+  margin-right: -$space-md;
+  border: 0;
+  background: transparent;
+
+  &:focus {
+    outline: none;
+
+    .icon-bar {
+      background: $blue-gray-dark;
+    }
+  }
+
+  .icon-bar {
+    display: block;
+    width: 24px;
+    height: 2px;
+    margin-top: 6px;
+    background: $blue-gray;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
