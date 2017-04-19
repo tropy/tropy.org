@@ -2,6 +2,10 @@
 // Mobile nav
 // --------------------------------------------------
 
+.nav-opened {
+  overflow: hidden;
+}
+
 .mobile-nav {
   background: $blue-gray;
   position: fixed;
@@ -59,5 +63,16 @@
     width: $nav-toggle-width;
     bottom: 0;
     z-index: 1;
+  }
+}
+
+.site-wrapper {
+  background: $body-bg;
+  position: relative;
+  transition: transform $mobile-nav-transition;
+  overflow: hidden; // for the sake of safety
+
+  .nav-opened & {
+    transform: translate3d(calc(-100% + #{$nav-toggle-width}), 0, 0);
   }
 }
