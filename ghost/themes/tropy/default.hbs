@@ -16,14 +16,14 @@
   </head>
   <body class="{{body_class}}">
     {{>mobile-nav}}
-    {{>header}}
     <div class="site-wrapper">
-      <main role="main">
-        {{navigation}}
-        {{{body}}}
-      </main>
+      {{>header}}
+        <main role="main">
+          {{navigation}}
+          {{{body}}}
+        </main>
+      {{{block 'footer'}}}
     </div>
-    {{{block 'footer'}}}
     {{>analytics}}
     {{>javascripts}}
   </body>
