@@ -17,13 +17,12 @@
   <body class="{{body_class}}">
     {{>mobile-nav}}
     {{>header}}
-
-    <main role="main">
-      {{navigation}}
-
-      {{{body}}}
-    </main>
-
+    <div class="site-wrapper">
+      <main role="main">
+        {{navigation}}
+        {{{body}}}
+      </main>
+    </div>
     {{{block 'footer'}}}
     {{>analytics}}
     {{>javascripts}}
