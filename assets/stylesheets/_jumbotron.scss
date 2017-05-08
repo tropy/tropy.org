@@ -83,5 +83,17 @@
       bottom: 0;
     }
   }
+
+  .download-links {
+    margin-top: 7px;
+  }
+
+  .download-link {
+    font-size: 14px;
+
+    & + .download-link {
+      margin-left: $space-md;
+    }
+  }
 }
 
