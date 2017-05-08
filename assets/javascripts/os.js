@@ -1,27 +1,36 @@
 (function () {
   'use strict'
 
-  var UA = navigator.userAgent
-  var button = document.querySelector('.download-button')
-  var text = 'Download <strong>Tropy Beta</strong>'
-  var href
+  try {
+    var UA = navigator.userAgent
 
-  if ((/Mac/).test(UA) && !(/iP(hone|ad)/).test(UA)) {
-    href = '/releases/tropy-1.0.0-beta.0.dmg'
-    text = text + ' for <strong>macOS</strong>'
+    var button = document.querySelector('.download-button')
+    var text = button.innerHTML
 
-  } else if ((/Windows/).test(UA)) {
-    href = '/releases/setup-tropy-1.0.0-beta.0.exe'
-    text = text + ' for <strong>Windows</strong>'
+    var links = {
+      mac: document.querySelector('.download-link.mac'),
+      linux: document.querySelector('.download-link.linux'),
+      win: document.querySelector('.download-link.win')
+    }
 
-  } else if ((/Linux/).test(UA) && !(/Android/).test(UA)) {
-    href = '/releases/tropy-1.0.0-beta.0.tar.bz2'
-    text = text + ' for <strong>Linux</strong>'
-  }
+    if ((/Mac/).test(UA) && !(/iP(hone|ad)/).test(UA)) {
+      links.mac.style.display = 'none'
+      button.setAttribute('href', links.mac.getAttribute('href'))
+      button.innerHTML = text + ' for <strong>macOS</strong>'
 
-  if (button != null && href != null) {
-    button.setAttribute('href', href)
-    button.innerHTML = text
+    } else if ((/Windows/).test(UA)) {
+      links.win.style.display = 'none'
+      button.setAttribute('href', links.win.getAttribute('href'))
+      button.innerHTML = text + ' for <strong>Windows</strong>'
+
+    } else if ((/Linux/).test(UA) && !(/Android/).test(UA)) {
+      links.linux.style.display = 'none'
+      button.setAttribute('href', links.linux.getAttribute('href'))
+      button.innerHTML = text + ' for <strong>Linux</strong>'
+    }
+
+  } catch (error) {
+    // ignore
   }
 
 }())
