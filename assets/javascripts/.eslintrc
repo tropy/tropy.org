@@ -1,0 +1,8 @@
+# vi: set ft=yaml
+env:
+  es6: true
+  browser: true
+rules:
+  strict:
+    - error
+    - function
