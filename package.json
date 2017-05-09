@@ -19,7 +19,7 @@
   "scripts": {
     "deploy": "shipit production deploy",
     "rollback": "shipit production rollback",
-    "lint": "eslint app.js routes/*.js bin/* && sass-lint -v",
+    "lint": "eslint app.js routes/*.js bin/* assets/javascripts/*.js && sass-lint -v",
     "pretest": "npm run lint --silent",
     "test": "mocha test/**/*_test.js",
     "start": "node ./bin/www"
