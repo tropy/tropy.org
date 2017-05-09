@@ -15,15 +15,16 @@
     {{ghost_head}}
   </head>
   <body class="{{body_class}}">
-    {{>header}}
-
-    <main role="main">
-      {{navigation}}
-
-      {{{body}}}
-    </main>
-
-    {{{block 'footer'}}}
+    {{>mobile-nav}}
+    <div class="site-wrapper">
+      {{>header}}
+        <main role="main">
+          {{navigation}}
+          {{{body}}}
+        </main>
+      {{{block 'footer'}}}
+    </div>
     {{>analytics}}
+    {{>javascripts}}
   </body>
 </html>

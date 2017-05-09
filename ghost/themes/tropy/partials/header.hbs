@@ -1,12 +1,21 @@
-<header class="main-header">
+<header class="main-header" aria-hidden="true">
   <div class="container">
     <h1 class="brand"><a href="/">
       <img class="tropy-icon hidden-xs" src="/images/tropy-icon-small.svg" width="36" height="32" alt=""><!--
       --><span class="brand-title">Tropy</span></a>
     </h1>
-    <nav class="header-nav">
-      <a href="/blog">Blog</a><!--
-      --><a href="https://github.com/tropy/tropy"><img src="/images/mark-github.svg" width="32" height="32" alt="GitHub"></a>
+    <nav class="header-nav hidden-xs">
+      <ul>
+        <li><a href="https://docs.tropy.org">Documentation</a></li><!--
+      --><li><a href="/blog">Blog</a></li><!--
+      --><li><a href="https://forums.tropy.org">Forums</a></li><!--
+      --><li><a href="https://github.com/tropy/tropy"><img src="/images/mark-github.svg" width="32" height="32" alt="GitHub"></a></li>
+      </ul>
     </nav>
+    <button class="nav-toggle visible-xs-block" type="button">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
   </div>
 </header>

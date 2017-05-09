@@ -46,11 +46,55 @@
 .header-nav {
   float: right;
 
-  a + a {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: inline;
+
+    &.active {
+      a {
+        color: $blue-gray-light;
+      }
+    }
+  }
+
+  li + li {
     margin-left: ($grid-gutter-width / 2);
 
     @media (min-width: $screen-sm) {
       margin-left: $grid-gutter-width;
+    }
+  }
+}
+
+.nav-toggle {
+  float: right;
+  padding: $nav-toggle-padding-vertical $nav-toggle-padding-horizontal;
+  margin-right: -$nav-toggle-padding-horizontal;
+  border: 0;
+  background: transparent;
+
+  &:focus {
+    outline: none;
+
+    .icon-bar {
+      background: $blue-gray-dark;
+    }
+  }
+
+  .icon-bar {
+    display: block;
+    width: $icon-bar-width;
+    height: $icon-bar-height;
+    margin-top: $icon-bar-spacing;
+    background: $blue-gray;
+
+    &:first-child {
+      margin-top: 0;
     }
   }
 }
