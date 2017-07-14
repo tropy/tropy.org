@@ -38,13 +38,13 @@
     "serve-favicon": "^2.3.0"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
-    "chai-as-promised": "^6.0.0",
+    "chai": "^4.1.0",
+    "chai-as-promised": "^7.1.1",
     "chai-http": "^3.0.0",
-    "eslint": "^3.3.1",
+    "eslint": "^4.2.0",
     "html-validator": "^2.0.1",
     "mocha": "^3.0.2",
-    "sass-lint": "^1.9.1",
+    "sass-lint": "^1.10.2",
     "shipit-cli": "^3.0.0",
     "shipit-deploy": "^2.2.0",
     "shipit-shared": "^4.4.1"
