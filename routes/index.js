@@ -2,6 +2,7 @@
 
 const express = require('express')
 const router = express.Router()
+const download = require('./download')
 
 router.get('/', (req, res) => {
   res.render('index', {
@@ -30,6 +31,8 @@ router.get('/license', (req, res) => {
     title: 'Tropy · License'
   })
 })
+
+router.use('/download', download)
 
 
 module.exports = router
