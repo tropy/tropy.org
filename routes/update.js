@@ -12,12 +12,10 @@ api.get(`${download.url}/:version`, (req, res) => {
   const version = req.params.version
 
   if (versions[channel].indexOf(version) > 0) {
-    const url = download.getAssetUrl(
-      versions[channel][0],
-      platform,
-      arch)
+    const name = versions[channel][0]
+    const url = download.getAssetUrl(name, platform, arch)
 
-    if (url) return res.status(200).json({ url })
+    if (url) return res.status(200).json({ url, name })
   }
 
   res.status(204).send('No Content')
