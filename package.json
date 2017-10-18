@@ -1,7 +1,7 @@
 {
   "name": "tropy.org",
   "description": "Tropy solves research entropy.",
-  "version": "0.0.1-alpha",
+  "version": "1.0.0",
   "private": true,
   "license": "AGPL-3.0",
   "homepage": "https://tropy.org",
