@@ -3,6 +3,7 @@
 const express = require('express')
 const router = express.Router()
 const download = require('./download')
+const update = require('./update')
 
 router.get('/', (req, res) => {
   res.render('index', {
@@ -32,7 +33,8 @@ router.get('/license', (req, res) => {
   })
 })
 
-router.use('/download', download)
+router.use('/download', download.api)
+router.use('/update', update.api)
 
 
 module.exports = router

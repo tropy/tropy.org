@@ -1,13 +1,14 @@
 'use strict'
 
 const express = require('express')
-const mw = module.exports = express.Router()
+const api = express.Router()
 const versions = require('../versions')
 
 const GITHUB = 'https://github.com/tropy/tropy/releases/download'
 
 function getAssetUrl(version, platform, arch) {
   if (arch !== 'x64') return null
+
   switch (platform) {
   case 'darwin':
     return `${GITHUB}/${version}/tropy-${version}.dmg`
@@ -20,13 +21,19 @@ function getAssetUrl(version, platform, arch) {
   }
 }
 
+function getReleasesUrl(version) {
+  return `${GITHUB}/${version}/RELEASES`
+}
 
-const CHANNEL = '(/:channel(beta|dev|stable))?'
-const PLATFORM = '/:platform(darwin|linux|win32)'
-const ARCH = '(/:arch(x32|x64))?'
+
+const url = [
+  '(/:channel(beta|dev|stable))?',
+  '/:platform(darwin|linux|win32)',
+  '(/:arch(x32|x64))?'
+].join('')
 
 
-mw.get(`${CHANNEL}${PLATFORM}${ARCH}(/:version)?`, (req, res, next) => {
+api.get(`${url}(/:version)?`, (req, res, next) => {
   const channel = req.params.channel || 'stable'
   const arch = req.params.arch || 'x64'
   const platform = req.params.platform
@@ -41,3 +48,10 @@ mw.get(`${CHANNEL}${PLATFORM}${ARCH}(/:version)?`, (req, res, next) => {
   err.status = 404
   next(err)
 })
+
+module.exports = {
+  api,
+  url,
+  getAssetUrl,
+  getReleasesUrl
+}
