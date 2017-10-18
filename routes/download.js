@@ -2,18 +2,9 @@
 
 const express = require('express')
 const mw = module.exports = express.Router()
+const versions = require('../versions')
 
-const GITHUB = 'https://github.com/tropy/tropy/releases/download/'
-
-const VERSIONS = {
-  dev: [
-  ],
-  beta: [
-    '1.0.0-beta.11'
-  ],
-  stable: [
-  ]
-}
+const GITHUB = 'https://github.com/tropy/tropy/releases/download'
 
 function getAssetUrl(version, platform, arch) {
   if (arch !== 'x64') return null
@@ -35,13 +26,13 @@ const PLATFORM = '/:platform(darwin|linux|win32)'
 const ARCH = '(/:arch(x32|x64))?'
 
 
-mw.get(`${CHANNEL}${PLATFORM}${ARCH}/:version`, (req, res, next) => {
+mw.get(`${CHANNEL}${PLATFORM}${ARCH}(/:version)?`, (req, res, next) => {
   const channel = req.params.channel || 'stable'
   const arch = req.params.arch || 'x64'
   const platform = req.params.platform
-  const version = req.params.version
+  const version = req.params.version || versions[channel][0]
 
-  const exists = (-1 !== VERSIONS[channel].indexOf(version))
+  const exists = (-1 !== versions[channel].indexOf(version))
   const url = exists && getAssetUrl(version, platform, arch)
 
   if (url) return res.redirect(url)
