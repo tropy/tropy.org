@@ -27,12 +27,13 @@ api.get(`${download.url}/:version`, (req, res) => {
 })
 
 
-api.get(`${download.url}/:file`, (req, res, next) => {
+api.get(`${download.url}/:version/:file`, (req, res, next) => {
   const channel = req.params.channel || 'stable'
-  const version = versions[channel][0]
+  const version = req.params.version
+  const exists = (-1 !== versions[channel].indexOf(version))
   const file = req.params.file
 
-  const url = version != null && download.getAssetFolder(version)
+  const url = exists && download.getAssetFolder(version)
 
   if (url && (isReleases(file) || isPkg(file))) {
     return res.redirect(`${url}/${file}`)
@@ -43,8 +44,8 @@ api.get(`${download.url}/:file`, (req, res, next) => {
   next(err)
 })
 
-const isReleases = (nupkg) => (nupkg === 'RELEASES')
-const isPkg = (nupkg) => ((/tropy-\d.+\.nupkg/).test(nupkg))
+const isReleases = (file) => (file === 'RELEASES')
+const isPkg = (file) => ((/tropy-\d.+\.nupkg/).test(file))
 
 module.exports = {
   api
