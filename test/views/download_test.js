@@ -22,7 +22,7 @@ describe('GET /download/(:channel/):platform/:version', () => {
 
   it('not found for bad platform', () =>
     request(app)
-      .get('/download/mac/1.0.0')
+      .get('/download/osx/1.0.0')
       .then(null, res => { expect(res).to.have.status(404) }))
 
   it('defaults to latest version', () =>
@@ -35,4 +35,15 @@ describe('GET /download/(:channel/):platform/:version', () => {
         )
       }))
 
+  it('resolves platform aliases', () =>
+    request(app)
+      .get('/download/beta/mac')
+      .redirects(0)
+      .then(null, res => { expect(res).to.have.status(302) }))
+
+  it('resolves platform aliases', () =>
+    request(app)
+      .get('/download/beta/windows')
+      .redirects(0)
+      .then(null, res => { expect(res).to.have.status(302) }))
 })

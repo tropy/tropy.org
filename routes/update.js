@@ -12,7 +12,7 @@ const variants = {
 api.get(`${download.url}/:version`, (req, res) => {
   const channel = req.params.channel || 'stable'
   const arch = req.params.arch || 'x64'
-  const platform = req.params.platform
+  const platform = download.getPlatform(req)
   const version = req.params.version
   const variant = variants[platform]
 

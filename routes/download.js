@@ -28,9 +28,26 @@ function getAssetUrl(version, platform, arch, variant) {
   }
 }
 
+function getPlatform(req) {
+  switch (req.params.platform) {
+  case 'mac':
+  case 'darwin':
+    return 'darwin'
+  case 'windows':
+  case 'win':
+  case 'win32':
+    return 'win32'
+  case 'linux':
+    return 'linux'
+  default:
+    return null
+  }
+
+}
+
 const url = [
   '(/:channel(beta|dev|stable))?',
-  '/:platform(darwin|linux|win32)',
+  '/:platform(darwin|mac|linux|win32|windows)',
   '(/:arch(x32|x64))?'
 ].join('')
 
@@ -42,7 +59,7 @@ const variants = {
 api.get(`${url}(/:version)?`, (req, res, next) => {
   const channel = req.params.channel || 'stable'
   const arch = req.params.arch || 'x64'
-  const platform = req.params.platform
+  const platform = getPlatform(req)
   const version = req.params.version || versions[channel][0]
   const variant = variants[platform]
 
@@ -59,6 +76,7 @@ api.get(`${url}(/:version)?`, (req, res, next) => {
 module.exports = {
   api,
   url,
+  getPlatform,
   getAssetFolder,
   getAssetUrl
 }
