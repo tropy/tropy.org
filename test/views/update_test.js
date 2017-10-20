@@ -5,7 +5,7 @@ const versions = require('../../versions')
 const route = require('../support/route')
 
 describe('GET /update/(:channel/):platform/:version', () => {
-  it('no content to latest version', () =>
+  it('no content for latest version', () =>
     request(app)
       .get(`/update/beta/darwin/${versions.beta[0]}`)
       .then(res => { expect(res).to.have.status(204) }))

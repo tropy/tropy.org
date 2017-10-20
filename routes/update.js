@@ -9,14 +9,27 @@ const variants = {
   darwin: 'zip', linux: '', win32: ''
 }
 
-api.get(`${download.url}/:version`, (req, res) => {
+const CHANNEL = '/:channel(dev|beta|stable)'
+const PLATFORM = '/:platform(darwin|linux|win32)'
+
+api.get(`${CHANNEL}${PLATFORM}(/:version)(/:file)?`, (req, res) => {
   const channel = req.params.channel || 'stable'
   const arch = req.params.arch || 'x64'
   const platform = download.getPlatform(req)
   const version = req.params.version
   const variant = variants[platform]
+  const file = req.params.file
 
-  if (versions[channel].indexOf(version) > 0) {
+  if (file != null && platform === 'win32') {
+    const url = download.getAssetFolder(versions[channel][0])
+
+    if (url && (isReleases(file) || isPkg(file))) {
+      return res.redirect(`${url}/${file}`)
+    }
+
+    res.status(404).send('Not Found')
+
+  } else if (versions[channel].indexOf(version) > 0) {
     const name = versions[channel][0]
     const url = download.getAssetUrl(name, platform, arch, variant)
 
@@ -24,24 +37,6 @@ api.get(`${download.url}/:version`, (req, res) => {
   }
 
   res.status(204).send('No Content')
-})
-
-
-api.get(`${download.url}/:version/:file`, (req, res, next) => {
-  const channel = req.params.channel || 'stable'
-  const version = req.params.version
-  const exists = (-1 !== versions[channel].indexOf(version))
-  const file = req.params.file
-
-  const url = exists && download.getAssetFolder(version)
-
-  if (url && (isReleases(file) || isPkg(file))) {
-    return res.redirect(`${url}/${file}`)
-  }
-
-  const err = new Error('This version of Tropy does not exist!')
-  err.status = 404
-  next(err)
 })
 
 const isReleases = (file) => (file === 'RELEASES')
