@@ -40,7 +40,7 @@ api.get(`${CHANNEL}${PLATFORM}(/:version)(/:file)?`, (req, res) => {
 })
 
 const isReleases = (file) => (file === 'RELEASES')
-const isPkg = (file) => ((/tropy-\d.+\.nupkg/).test(file))
+const isPkg = (file) => ((/tropy-.+\.nupkg/).test(file))
 
 module.exports = {
   api

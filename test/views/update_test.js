@@ -41,7 +41,7 @@ describe('GET /update/(:channel/):platform/:version/RELEASES', () => {
 describe('GET /update/(:channel/):platform/:version/:pkg', () => {
   it('redirects for good package names', () =>
     request(app)
-      .get('/update/beta/win32/1.0.0-beta.13/tropy-1.0.0-beta13-full.nupkg')
+      .get('/update/beta/win32/1.0.0-beta.12/tropy-beta-1.0.0-beta13-full.nupkg')
       .redirects(0)
       .then(route.unreachable, res =>
         expect(res).to.have.status(302)))
