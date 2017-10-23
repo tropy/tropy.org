@@ -61,6 +61,7 @@
     transform: translate3d(calc(100% * 738 / 1138), 0, 0);
     opacity: 0;
     transition: transform $mode-transition, opacity $mode-transition;
+    will-change: transform, opacity;
   }
 
   &.item-mode {
