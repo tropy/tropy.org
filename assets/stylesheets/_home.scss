@@ -50,7 +50,6 @@
     will-change: transform;
   }
 
-  &:hover,
   &.item-mode {
     .project-view {
       transform: translate3d(-25%, 0, 0);
