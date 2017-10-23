@@ -1,6 +1,18 @@
 (function () {
   'use strict'
 
+  var isPassiveSupported = false
+
+  try {
+    var options = Object.defineProperty({}, 'passive', {
+      get: function () { isPassiveSupported = true }
+    })
+
+    window.addEventListener('test', null, options)
+  } catch(err) {
+    // not supported
+  }
+
   var se = document.scrollingElement || document.documentElement
   var screenshot = document.querySelector('.screenshot')
 
@@ -25,7 +37,12 @@
   }
 
   document.addEventListener('resize', onResize)
-  document.addEventListener('scroll', onScroll, { passive: true })
+
+  if (isPassiveSupported) {
+    document.addEventListener('scroll', onScroll, { passive: true })
+  } else {
+    document.addEventListener('scroll', onScroll)
+  }
 
   onResize()
   onScroll()
