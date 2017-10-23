@@ -1,0 +1,22 @@
+//
+// License
+// --------------------------------------------------
+
+.license {
+  &.container-fluid {
+    max-width: $blog-container-width;
+
+    @media (min-width: $screen-sm) {
+      padding: 0;
+      width: 80%;
+    }
+  }
+
+  h1 {
+    margin-top: 46px; // 96px
+
+    @media (min-width: $screen-sm-min) {
+      margin-top: 121px; // 144px
+    }
+  }
+}
