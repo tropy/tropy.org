@@ -3,7 +3,6 @@
 // --------------------------------------------------
 
 .screenshot {
-
   figure {
     width: 100%;
     max-width: 100%;
@@ -13,7 +12,7 @@
     z-index: 4;
     overflow: hidden;
 
-    &:after {
+    &::after {
       content: "";
       z-index: 2;
       position: absolute;
@@ -21,9 +20,10 @@
       top: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba($gray-base, 0.0);
-      transition: background $mode-transition;
-      will-change: background-color;
+      background-color: $gray-base;
+      opacity: 0;
+      transition: opacity $mode-transition;
+      will-change: opacity;
     }
   }
 
@@ -55,8 +55,8 @@
       transform: translate3d(-25%, 0, 0);
     }
 
-    &:after {
-      background-color: rgba($gray-base, 0.1);
+    figure::after {
+      opacity: 0.1;
     }
 
     .item-view {
@@ -85,7 +85,7 @@
 .screenshot-corners {
   position: relative;
 
-  &:after {
+  &::after {
     content: "";
     position: absolute;
     top: 0;
