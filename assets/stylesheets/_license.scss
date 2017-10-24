@@ -15,10 +15,11 @@
 
   h1 {
     margin-top: 46px; // 96px
+    margin-bottom: 78px; // 96px
 
     @media (min-width: $screen-sm-min) {
       margin-top: 121px; // 144px
-      margin-bottom: 115px; //144px
+      margin-bottom: 119px; //144px
     }
   }
 
@@ -28,11 +29,22 @@
     margin-bottom: 28px; // Line height of Tropy license
   }
 
+  p {
+    margin-bottom: 28px;
+  }
+
   .tropy-license {
     line-height: 24px;
 
     @media (min-width: $screen-sm-min) {
       line-height: 28px;
+    }
+
+    .preamble {
+      text-align: left;
+      border-bottom: 1px solid $gray-lighter;
+      padding-bottom: 59px; // 96px
+      margin-bottom: 78px; // 96px
     }
 
     h3,
