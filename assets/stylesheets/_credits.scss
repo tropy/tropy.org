@@ -4,8 +4,71 @@
 
 .credits {
   text-align: center;
+  padding-bottom: 48px; // 144px
 
   h1 {
     margin-top: 121px; // 144px
+  }
+
+  h2 {
+    margin-top: 117px; // 144px (146px to h1)
+    margin-bottom: $space-sm;
+  }
+
+  .contributors {
+    margin-bottom: 79px; // 96px
+  }
+
+  .h4 {
+    letter-spacing: -0.5px;
+    white-space: nowrap;
+    margin: 0 0 $space-xs;
+  }
+
+  .software {
+    margin-top: 39px; // 144px
+    margin-bottom: 64px;
+
+    @media (min-width: $screen-sm-min) {
+      margin-bottom: 86px; // 96px
+    }
+  }
+
+  .logo {
+    vertical-align: middle;
+    margin-bottom: 96px;
+    position: relative;
+
+    @media (min-width: $screen-sm-min) {
+      display: inline-block;
+      float: none;
+    }
+  }
+
+  .pixi-js,
+  .sqlite {
+    top: 2px;
+  }
+
+  .prose-mirror {
+    top: -2px;
+  }
+
+  svg {
+    vertical-align: middle;
+
+    path {
+      transition: fill 0.8s ease;
+    }
+
+    &:not(:hover) {
+      .blue-gray {
+        fill: $blue-gray;
+      }
+
+      .blue-gray-70 {
+        fill: mix($blue-gray, $white, 70%);
+      }
+    }
   }
 }
