@@ -41,7 +41,11 @@
     }
 
     .preamble {
-      text-align: left;
+      font-size: $font-size-large;
+      font-family: $headings-font-family;
+      font-weight: $headings-font-weight;
+      line-height: 1.5;
+      color: $blue-gray-dark;
       border-bottom: 1px solid $gray-lighter;
       padding-bottom: 59px; // 96px
       margin-bottom: 78px; // 96px
