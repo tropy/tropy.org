@@ -7,20 +7,20 @@ const route = require('../support/route')
 describe('GET /download/(:channel/):platform/:version', () => {
   it('redirects for existing versions', () =>
     request(app)
-      .get('/download/beta/darwin/1.0.0-beta.11')
+      .get('/download/darwin/1.0.0')
       .redirects(0)
       .then(route.unreachable, res =>
         expect(res).to.have.status(302)))
 
   it('not found for non-existing versions', () =>
     request(app)
-      .get('/download/darwin/1.0.0')
+      .get('/download/mac/0.0.9')
       .then(route.unreachable, res =>
         expect(res).to.have.status(404)))
 
   it('not found for bad versions', () =>
     request(app)
-      .get('/download/darwin/x.0.0')
+      .get('/download/mac/x.0.0')
       .then(route.unreachable, res =>
         expect(res).to.have.status(404)))
 
@@ -42,14 +42,14 @@ describe('GET /download/(:channel/):platform/:version', () => {
 
   it('resolves platform aliases', () =>
     request(app)
-      .get('/download/beta/mac')
+      .get('/download/mac')
       .redirects(0)
       .then(route.unreachable, res =>
         expect(res).to.have.status(302)))
 
   it('resolves platform aliases', () =>
     request(app)
-      .get('/download/beta/windows')
+      .get('/download/windows')
       .redirects(0)
       .then(route.unreachable, res =>
         expect(res).to.have.status(302)))
