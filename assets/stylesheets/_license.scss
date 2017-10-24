@@ -1,0 +1,147 @@
+//
+// License
+// --------------------------------------------------
+
+.license {
+  &.container-fluid {
+    max-width: $blog-container-width;
+    margin-bottom: 113px; // 144px
+
+    @media (min-width: $screen-sm) {
+      padding: 0;
+      width: 80%;
+    }
+  }
+
+  h1 {
+    margin-top: 46px; // 96px
+    margin-bottom: 78px; // 96px
+
+    @media (min-width: $screen-sm-min) {
+      margin-top: 121px; // 144px
+      margin-bottom: 119px; //144px
+    }
+  }
+
+  h2,
+  h3,
+  h4 {
+    margin-bottom: 28px; // Line height of Tropy license
+  }
+
+  p {
+    margin-bottom: 28px;
+  }
+
+  .tropy-license {
+    line-height: 24px;
+
+    @media (min-width: $screen-sm-min) {
+      line-height: 28px;
+    }
+
+    .preamble {
+      font-size: $font-size-large;
+      font-family: $headings-font-family;
+      font-weight: $headings-font-weight;
+      line-height: 1.5;
+      color: $blue-gray-dark;
+      border-bottom: 1px solid $gray-lighter;
+      padding-bottom: 59px; // 96px
+      margin-bottom: 78px; // 96px
+      position: relative;
+
+      .jump {
+        font-size: $font-size-small;
+        position: absolute;
+        left: 50%;
+        bottom: 8px;
+        transform: translateX(-50%);
+      }
+    }
+
+    h3,
+    h4 {
+      @media (min-width: $screen-sm-min) {
+        width: 80%;
+        margin: {
+          left: auto;
+          right: auto;
+        }
+      }
+    }
+
+    h3 {
+      font-size: $font-size-h2;
+      margin-top: 70px; // 96px
+    }
+
+    h4 {
+      font-family: $headings-font-family;
+      font-weight: 200;
+      font-size: $font-size-h3;
+      margin-top: 42px; // 64px
+    }
+
+    ol {
+      list-style: lower-latin;
+      padding-left: $space-xxl;
+      margin-bottom: 24px;
+    }
+
+    pre {
+      border-top: 11px solid transparent;
+      background-clip: padding-box;
+      margin-bottom: 32px;
+    }
+  }
+
+  .third-party-licenses {
+    padding-top: 118px; // 144px, use padding for jump link
+
+    h2 {
+      margin-top: 0;
+    }
+  }
+
+  .lead {
+    margin-bottom: 75px; // 96px
+  }
+
+  .dependency {
+    font-size: 18px;
+    line-height: $space-xl;
+    text-align: center;
+
+    .package {
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+    }
+
+    .license {
+      margin-top: 12px;
+      margin-bottom: 30px; // Empty line
+      text-align: left;
+    }
+  }
+
+  .chromium-licenses {
+    text-align: center;
+    font-size: 18px;
+
+    h2 {
+      margin-top: 116px; // 144px
+    }
+  }
+
+  .sqlite-licenses {
+    text-align: center;
+    font-size: 18px;
+
+    h2 {
+      margin-top: 119px; // 144px
+    }
+  }
+}

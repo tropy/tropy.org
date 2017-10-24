@@ -1,0 +1,203 @@
+//
+// Home
+// --------------------------------------------------
+
+.screenshot {
+  figure {
+    width: 100%;
+    max-width: 100%;
+    padding-top: calc((100% - 2px) * 638 / 1138);
+    border: 1px solid $gray-lighter;
+    position: relative;
+    z-index: 4;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      z-index: 2;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $gray-base;
+      opacity: 0;
+      transition: opacity $mode-transition;
+      will-change: opacity;
+    }
+  }
+
+  .project-view,
+  .item-view {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    transition: transform $mode-transition;
+  }
+
+  .project-view {
+    transform: translate3d(0, 0, 0);
+    z-index: 1;
+    will-change: transform;
+  }
+
+  .item-view {
+    transform: translate3d(calc(100% * 807 / 1138), 0, 0);
+    z-index: 3;
+    will-change: transform;
+  }
+
+  .chevron {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    background: url(image-path("chevron@2x.png")) 0 0 no-repeat;
+    background-size: 100%;
+    transform: translate3d(calc(100% * 738 / 1138), 0, 0);
+    opacity: 0;
+    transition: transform $mode-transition, opacity $mode-transition;
+  }
+
+  &.item-mode {
+    .project-view {
+      transform: translate3d(-25%, 0, 0);
+    }
+
+    figure::after {
+      opacity: 0.1;
+    }
+
+    .item-view {
+      transform: translate3d(0, 0, 0);
+    }
+
+    .chevron {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+  }
+
+  .window-buttons {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 6;
+    width: 100%;
+    height: 100%;
+    background: url(image-path("window-buttons.png")) 0 0 no-repeat;
+    background-size: 100%;
+
+    @media
+      (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        background-image: url(image-path("window-buttons@2x.png"));
+    }
+  }
+}
+
+.screenshot-corners {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url(image-path("corners@2x.png")) 0 0 no-repeat;
+    background-size: 100%;
+    z-index: 7;
+  }
+}
+
+.feature {
+  text-align: center;
+  line-height: 1.3125; // 21px
+  margin-bottom: 27px; // 32px
+
+  img {
+    margin-bottom: 14px;
+  }
+
+  p {
+    color: $headings-color;
+    margin: 0 (-$space-xs);
+  }
+
+  .second-line {
+    @media (min-width: $screen-sm-min) {
+      display: block;
+    }
+  }
+}
+
+.contributors {
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    padding: 0 3.125%;
+  }
+
+  @media (min-width: $screen-md-min) {
+    padding: 0 12.5%;
+  }
+}
+
+.contributor {
+  margin-bottom: 33px;
+
+  @media (min-width: $screen-sm-min) {
+    margin-bottom: 57px;
+  }
+}
+
+
+// Pixel perfect
+// --------------------------------------------------
+
+#tropy-at-a-glance {
+  .lead {
+    margin-bottom: 86px; // 96px
+
+    @media (max-width: $screen-xs-max) {
+      margin-bottom: 56px; // 64px
+    }
+  }
+}
+
+#features {
+  padding-top: 52px;
+
+  @media (min-width: $screen-sm-min) {
+    padding-top: 77px;
+  }
+
+  h2 {
+    margin-bottom: 42px;
+
+    @media (min-width: $screen-sm-min) {
+      margin-bottom: 56px;
+    }
+  }
+}
+
+#team {
+  padding-bottom: 25px;
+
+  @media (min-width: $screen-sm-min) {
+    padding-bottom: 9px;
+  }
+
+  h4 {
+    margin: {
+      left: -$space-md; // Prevent line break in Stephen Roberston
+      right: -$space-md;
+    }
+  }
+}

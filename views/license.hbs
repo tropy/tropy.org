@@ -1,8 +1,39 @@
-<div class="container">
-  <div class="row">
-    <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
-      <h1>License</h1>
-      <p>TBD</p>
-    </div>
-  </div>
+<div class="container-fluid license">
+  <h1>License</h1>
+  <section class="tropy-license">
+{{>tropy-license}}
+  </section>
+  <section class="third-party-licenses" id="third-party-licenses">
+    <h2>Third-party licenses</h2>
+    <p class="lead">Tropy bundles the following third-party packages in accordance with the following licenses</p>
+{{>dependencies}}
+  </section>
+  <section class="chromium-licenses">
+    <h2>Chromium licenses</h2>
+    <p><a href="https://chromium.googlesource.com/chromium/src/+/91e5715acfa6cac439f98438f1bedade3d863b9a/chrome/browser/resources/chromeos/about_os_credits.html">Chromium licenses</a></p>
+  </section>
+  <section class="sqlite-licenses">
+    <h2>SQLite licenses</h2>
+    <p><a href="https://sqlite.org/copyright.html">SQLite licenses</a></p>
+  </section>
 </div>
+
+<script language="javascript">
+  var acc = document.getElementsByClassName("package");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(event) {
+      event.preventDefault()
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    }
+  }
+</script>
+
+{{#contentFor 'footer'}} {{>footer}} {{/contentFor}}
