@@ -49,6 +49,15 @@
       border-bottom: 1px solid $gray-lighter;
       padding-bottom: 59px; // 96px
       margin-bottom: 78px; // 96px
+      position: relative;
+
+      .jump {
+        font-size: $font-size-small;
+        position: absolute;
+        left: 50%;
+        bottom: 8px;
+        transform: translateX(-50%);
+      }
     }
 
     h3,
@@ -88,8 +97,10 @@
   }
 
   .third-party-licenses {
+    padding-top: 118px; // 144px, use padding for jump link
+
     h2 {
-      margin-top: 118px; // 144px
+      margin-top: 0;
     }
   }
 
