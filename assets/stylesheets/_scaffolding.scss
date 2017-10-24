@@ -2,6 +2,15 @@
 // Scaffolding
 // --------------------------------------------------
 
+.container-fluid {
+  max-width: $container-fluid-width;
+
+  @media (min-width: $screen-sm) {
+    padding: 0;
+    width: 80%;
+  }
+}
+
 hr {
   margin: 0;
 }
