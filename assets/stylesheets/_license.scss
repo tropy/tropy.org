@@ -3,14 +3,8 @@
 // --------------------------------------------------
 
 .license {
-  &.container-fluid {
-    max-width: $blog-container-width;
+  .container-fluid {
     margin-bottom: 113px; // 144px
-
-    @media (min-width: $screen-sm) {
-      padding: 0;
-      width: 80%;
-    }
   }
 
   h1 {
