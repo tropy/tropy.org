@@ -79,13 +79,7 @@ h4,
   }
 
   &:last-child {
-    .page-section-sm & {
-      margin-bottom: 22px; // 48px
-
-      @media (min-width: $screen-sm-min) {
-        margin-bottom: 21px; // 72px
-      }
-    }
+    margin: 0 auto;
   }
 }
 
