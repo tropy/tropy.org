@@ -24,11 +24,10 @@ hr {
   }
 }
 
-// Assumes h2 as first child and p as last child
 .page-section-sm {
-  padding: 36px 0 18px; // 48px
+  padding: 48px 0;
 
   @media (min-width: $screen-sm-min) {
-    padding: 54px 0 42px; // 72px (doubles to 144px)
+    padding: 72px 0; // Doubles to 144px
   }
 }

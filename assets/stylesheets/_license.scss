@@ -3,47 +3,43 @@
 // --------------------------------------------------
 
 .license {
-  .container-fluid {
-    margin-bottom: 113px; // 144px
-  }
-
-  h1 {
-    margin-top: 46px; // 96px
-    margin-bottom: 78px; // 96px
-
-    @media (min-width: $screen-sm-min) {
-      margin-top: 121px; // 144px
-      margin-bottom: 119px; //144px
-    }
-  }
-
   h2,
   h3,
-  h4 {
-    margin-bottom: 28px; // Line height of Tropy license
-  }
-
+  h4,
   p {
-    margin-bottom: 28px;
+    margin-bottom: 24px;
+
+    @media (min-width: $screen-sm-min) {
+      margin-bottom: 28px; // Line height of Tropy license
+    }
   }
 
   .tropy-license {
-    line-height: 24px;
+    padding-top: 37px;
+    padding-bottom: 18px;
 
     @media (min-width: $screen-sm-min) {
       line-height: 28px;
+      padding-top: 58px; // 72px
+      padding-bottom: 36px;
     }
 
     .preamble {
-      font-size: $font-size-large;
+      font-size: $font-size-large-mobile;
       font-family: $headings-font-family;
       font-weight: $headings-font-weight;
       line-height: 1.5;
       color: $blue-gray-dark;
       border-bottom: 1px solid $gray-lighter;
-      padding-bottom: 59px; // 96px
-      margin-bottom: 78px; // 96px
       position: relative;
+      padding-bottom: 32px; // 64px
+      margin-bottom: 52px; // 64px
+
+      @media (min-width: $screen-sm-min) {
+        font-size: $font-size-large;
+        padding-bottom: 59px; // 96px
+        margin-bottom: 78px; // 96px
+      }
 
       .jump {
         font-size: $font-size-small;
@@ -66,15 +62,25 @@
     }
 
     h3 {
-      font-size: $font-size-h2;
-      margin-top: 70px; // 96px
+      font-size: $font-size-h2-mobile;
+      margin-top: 46px; // 64px
+
+      @media (min-width: $screen-sm-min) {
+        font-size: $font-size-h2;
+        margin-top: 70px; // 96px
+      }
     }
 
     h4 {
       font-family: $headings-font-family;
+      font-size: $font-size-h3-mobile;
       font-weight: 200;
-      font-size: $font-size-h3;
-      margin-top: 42px; // 64px
+      margin-top: 28px; // 43px
+
+      @media (min-width: $screen-sm-min) {
+        font-size: $font-size-h3;
+        margin-top: 42px; // 64px
+      }
     }
 
     ol {
@@ -84,22 +90,35 @@
     }
 
     pre {
-      border-top: 11px solid transparent;
+      border-top: 9px solid transparent;
       background-clip: padding-box;
-      margin-bottom: 32px;
+      margin-bottom: 29px;
+
+      @media (min-width: $screen-sm-min) {
+        margin-bottom: 35px;
+        border-top: 11px solid transparent;
+      }
     }
   }
 
   .third-party-licenses {
-    padding-top: 118px; // 144px, use padding for jump link
+    padding: 37px 0 38px;
+
+    @media (min-width: $screen-sm-min) {
+      padding: 54px 0 62px;
+    }
 
     h2 {
       margin-top: 0;
     }
-  }
 
-  .lead {
-    margin-bottom: 75px; // 96px
+    .lead {
+      margin-bottom: 44px; // 64px
+
+      @media (min-width: $screen-sm-min) {
+        margin-bottom: 75px; // 96px
+      }
+    }
   }
 
   .dependency {
@@ -121,21 +140,22 @@
     }
   }
 
-  .chromium-licenses {
-    text-align: center;
-    font-size: 18px;
-
-    h2 {
-      margin-top: 116px; // 144px
-    }
-  }
-
+  .chromium-licenses,
   .sqlite-licenses {
     text-align: center;
     font-size: 18px;
+    padding: 36px 0 17px;
 
-    h2 {
-      margin-top: 119px; // 144px
+    @media (min-width: $screen-sm-min) {
+      padding: 54px 0 37px;
+    }
+  }
+
+  .main-footer {
+    margin-top: 48px;
+
+    @media (min-width: $screen-sm-min) {
+      margin-top: 72px; // 144px
     }
   }
 }

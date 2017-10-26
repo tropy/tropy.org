@@ -5,11 +5,11 @@
 .credits {
   text-align: center;
 
-  .page-section-lg {
-    padding-bottom: 30px; // 96px
+  .page-section-sm {
+    padding: 36px 0 18px;
 
     @media (min-width: $screen-sm-min) {
-      padding-bottom: 48px; // 144px
+      padding: 54px 0 42px;
     }
   }
 
