@@ -9,7 +9,7 @@
     padding: 36px 0 40px;
 
     @media (min-width: $screen-sm-min) {
-      padding: 54px 0 62px;
+      padding: 54px 0 63px;
     }
   }
 
@@ -23,10 +23,11 @@
 
   .contributors {
     margin-top: 49px; // 64px
+    margin-bottom: -23px;
 
     @media (min-width: $screen-sm-min) {
       margin-top: 79px; // 96px
-      margin-bottom: -57px; // 72px
+      margin-bottom: -78px; // 72px
     }
   }
 
@@ -38,9 +39,11 @@
 
   .logos {
     margin-top: 46px;
+    margin-bottom: 3px;
 
     @media (min-width: $screen-sm-min) {
       margin-top: 86px; // 96px
+      margin-bottom: -20px; // 144px
     }
   }
 
@@ -80,14 +83,6 @@
       .blue-gray-70 {
         fill: mix($blue-gray, $white, 70%);
       }
-    }
-  }
-
-  .main-footer {
-    margin-top: 25px;
-
-    @media (min-width: $screen-sm-min) {
-      margin-top: 1px;
     }
   }
 }
