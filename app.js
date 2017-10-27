@@ -38,10 +38,8 @@ app
   })
 
   // temporary redirect for release twitter link
-  .use('/blog/untitled', (req, res, next) => {
+  .use('/blog/untitled', (req, res) => {
     res.redirect('/blog/tropy-1-0-released/')
-    req.ghost = true
-    next()
   })
 
   .use('/blog', (req, res, next) => {
