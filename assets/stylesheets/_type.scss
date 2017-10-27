@@ -3,11 +3,17 @@
 // --------------------------------------------------
 
 h1,
+.h1,
 h2,
+.h2,
 h3,
+.h3,
 h4,
+.h4,
 h5,
-h6 {
+.h5,
+h6,
+.h6 {
   text-align: center;
   margin: 0;
 }
@@ -47,7 +53,8 @@ h3 {
   }
 }
 
-h4 {
+h4,
+.h4 {
   margin: 0 0 ($font-size-base / 2);
 }
 
@@ -70,6 +77,10 @@ h4 {
     font-size: $font-size-large-mobile;
     margin-bottom: 47px; // 64px
   }
+
+  &:last-child {
+    margin: 0 auto;
+  }
 }
 
 p {
@@ -79,4 +90,22 @@ p {
 small,
 .small {
   font-size: (100% * $font-size-small / $font-size-base); // Without floor
+}
+
+.page-header {
+  border: 0;
+  padding: 0;
+  margin: 56px 0 41px; // 96px to header text
+
+  @media (min-width: $screen-sm-min) {
+    margin: 121px 0 61px; // 144px, assumes subsequent page-section-sm with h2
+  }
+}
+
+.contributor {
+  margin-bottom: 33px; // 48px
+
+  @media (min-width: $screen-sm-min) {
+    margin-bottom: 57px; // 96px
+  }
 }

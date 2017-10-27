@@ -4,19 +4,31 @@
 
 .credits {
   text-align: center;
-  padding-bottom: 48px; // 144px
 
-  h1 {
-    margin-top: 121px; // 144px
+  .page-section-sm {
+    padding: 36px 0 40px;
+
+    @media (min-width: $screen-sm-min) {
+      padding: 54px 0 63px;
+    }
   }
 
   h2 {
-    margin-top: 117px; // 144px (146px to h1)
-    margin-bottom: $space-sm;
+    margin-bottom: $space-lg / 2;
+
+    @media (max-width: $screen-xs-max) {
+      margin-bottom: $font-size-large-mobile / 2;
+    }
   }
 
   .contributors {
-    margin-bottom: 79px; // 96px
+    margin-top: 49px; // 64px
+    margin-bottom: -23px;
+
+    @media (min-width: $screen-sm-min) {
+      margin-top: 79px; // 96px
+      margin-bottom: -78px; // 72px
+    }
   }
 
   .h4 {
@@ -25,21 +37,23 @@
     margin: 0 0 $space-xs;
   }
 
-  .software {
-    margin-top: 39px; // 144px
-    margin-bottom: 64px;
+  .logos {
+    margin-top: 46px;
+    margin-bottom: 3px;
 
     @media (min-width: $screen-sm-min) {
-      margin-bottom: 86px; // 96px
+      margin-top: 86px; // 96px
+      margin-bottom: -20px; // 144px
     }
   }
 
   .logo {
     vertical-align: middle;
-    margin-bottom: 96px;
     position: relative;
+    margin-bottom: $space-xxl;
 
     @media (min-width: $screen-sm-min) {
+      margin-bottom: $space-max;
       display: inline-block;
       float: none;
     }

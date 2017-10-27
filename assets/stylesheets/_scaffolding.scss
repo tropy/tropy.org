@@ -15,10 +15,19 @@ hr {
   margin: 0;
 }
 
+// Assumes h1 as first child and p as last child
 .page-section {
   padding: 48px 0 34px;
 
   @media (min-width: $screen-sm-min) {
     padding: 72px 0 66px;
+  }
+}
+
+.page-section-sm {
+  padding: 48px 0;
+
+  @media (min-width: $screen-sm-min) {
+    padding: 72px 0; // Doubles to 144px
   }
 }
