@@ -1,0 +1,22 @@
+{
+  "x64": {
+    "dev": [],
+    "beta": [
+      "F1BEC3289ED9B81642639E21E00B021E488DF83A tropy-beta-1.0.0-beta16-delta.nupkg 152734",
+      "EBA1581C3B7A53D559E5A8CEE93BA19CCBE39A71 tropy-beta-1.0.0-beta16-full.nupkg 74188429",
+      ""
+    ],
+    "stable": [
+      "77ED5F6202EA775F36C75F4B9FEC42BE53EE7B87 tropy-1.0.0-delta.nupkg 88571",
+      "6D602429E893487DC68DCBB70EF24CB2A7A0FA17 tropy-1.0.0-full.nupkg 74206851",
+      ""
+    ]
+  },
+  "x32": {
+    "dev": [],
+    "beta": [
+    ],
+    "stable": [
+    ]
+  }
+}
