@@ -9,6 +9,10 @@ describe('GET /update/(:channel/):platform/:version', () => {
     request(app)
       .get(`/update/stable/darwin/${versions.stable[0]}`)
       .then(res => { expect(res).to.have.status(204) }))
+  it('OK for previous mac release', () =>
+    request(app)
+      .get(`/update/stable/darwin/${versions.stable[1]}`)
+      .then(res => { expect(res).to.have.status(200) }))
   it('no content for latest linux release', () =>
     request(app)
       .get(`/update/stable/linux/${versions.stable[0]}`)
@@ -96,7 +100,7 @@ describe('GET /update/(:channel/)win32/RELEASES', () => {
 describe('GET /update/(:channel/)win32/:pkg', () => {
   it('redirects for good package names', () =>
     request(app)
-      .get('/update/stable/win32/tropy-1.0.0-full.nupkg')
+      .get('/update/stable/win32/tropy-1.0.1-full.nupkg')
       .redirects(0)
       .then(route.unreachable, res =>
         expect(res).to.have.status(302)))
