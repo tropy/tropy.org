@@ -24,9 +24,13 @@
 
 .post-image {
   display: block;
-  margin: 144px auto 73px; // 144px, 96px
+  margin: 72px auto 48px; // 96px, 64px
   max-width: 100%;
   height: auto;
+
+  @media (min-width: $screen-sm-min) {
+    margin: 144px auto 73px; // 96px
+  }
 }
 
 .post-content {
