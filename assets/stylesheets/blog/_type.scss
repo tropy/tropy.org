@@ -77,6 +77,14 @@
 }
 
 .lead {
+  .home-template & {
+    margin-bottom: 47px; // 64px
+
+    @media (min-width: $screen-sm-min) {
+      margin-bottom: 78px; // 96px
+    }
+  }
+
   .author-template & {
     margin-bottom: 16px;
   }
