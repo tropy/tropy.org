@@ -40,8 +40,9 @@ api.get(`${CHANNEL}${PLATFORM}${ARCH}/:version`, (req, res) => {
   if (VERSIONS[channel].indexOf(version) > 0) {
     const name = VERSIONS[channel][0]
     const url = download.getAssetUrl(name, platform, arch, variant)
+    const notes = download.getAssetFolder(name)
 
-    if (url) return noCache(res).status(200).json({ url, name })
+    if (url) return noCache(res).status(200).json({ url, name, notes })
   }
 
   res.status(204).end()

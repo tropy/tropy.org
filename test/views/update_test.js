@@ -45,6 +45,7 @@ describe('GET /update/(:channel/):platform/:version', () => {
           expect(res).to.have.status(200)
           expect(res.body).to.eql({
             url: 'https://github.com/tropy/tropy/releases/download/LATEST/tropy-LATEST-darwin.zip',
+            notes: 'https://github.com/tropy/tropy/releases/download/LATEST',
             name: 'LATEST'
           })
         }))
