@@ -8,6 +8,7 @@ const autoprefixer = require('autoprefixer')
 
 const app = express()
 
+
 const paths = {
   assets: resolve(__dirname, 'assets'),
   public: resolve(__dirname, 'public'),
@@ -25,6 +26,8 @@ app
     layoutsDir: join(paths.views, 'layouts'),
     defaultLayout: join(paths.views, 'layouts', 'default.hbs')
   }))
+
+  .set('trust proxy', true)
 
   .set('view engine', 'hbs')
   .set('views', paths.views)
