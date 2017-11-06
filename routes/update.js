@@ -4,6 +4,8 @@ const express = require('express')
 const api = module.exports = express.Router()
 const download = require('./download')
 
+const onHeaders = require('on-headers')
+
 const VERSIONS = require('../versions')
 const RELEASES = require('../releases')
 
@@ -22,6 +24,11 @@ const ARCH = '(/:arch(x32|x64))?'
 const PLATFORM = '(/:platform(darwin|linux))'
 
 
+function noCache(res) {
+  onHeaders(res, function () { this.removeHeader('ETag') })
+  return res
+}
+
 // Linux and macOS
 api.get(`${CHANNEL}${PLATFORM}${ARCH}/:version`, (req, res) => {
   const channel = req.params.channel || 'stable'
@@ -34,7 +41,7 @@ api.get(`${CHANNEL}${PLATFORM}${ARCH}/:version`, (req, res) => {
     const name = VERSIONS[channel][0]
     const url = download.getAssetUrl(name, platform, arch, variant)
 
-    if (url) return res.status(200).json({ url, name })
+    if (url) return noCache(res).status(200).json({ url, name })
   }
 
   res.status(204).end()
