@@ -9,9 +9,6 @@
  */
 'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
 /*
  * Determine whether or not `window` is available.
  */
@@ -249,8 +246,5 @@ function retina(images) {
  * If this environment has `window`, activate the plugin.
  */
 if (hasWindow) {
-  window.addEventListener('load', retina);
-  window.retinajs = retina;
+  retina();
 }
-
-exports.default = retina;
