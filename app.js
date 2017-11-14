@@ -53,7 +53,9 @@ app
 
 switch (app.get('env')) {
 case 'production':
-  app.use(require('morgan')('combined'))
+  app.use(require('morgan')(
+    ':remote-addr - :remote-user [:date[iso]] ":method :url HTTP/:http-version" :status :res[content-length] ":referrer" ":user-agent"'
+  ))
 
   try {
     app.locals.ga = require('./config').analytics.google
