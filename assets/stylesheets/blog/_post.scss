@@ -59,7 +59,6 @@
   p,
   figure {
     margin: 0 0 $line-height-post-xs;
-    overflow: hidden; // Contain margin of img and iframe
 
     @media (min-width: $screen-sm) {
       margin: 0 0 $line-height-post;
@@ -71,7 +70,7 @@
     display: block;
     position: relative;
     height: auto;
-    margin: 9px 0 6px;
+    padding: 9px 0 6px;
 
     @media (max-width: $screen-xs-max) {
       width: calc(100% + #{$grid-gutter-width}) !important; // Override iframe inline styles
@@ -82,7 +81,7 @@
       max-width: 126%;
       left: 50%;
       transform: translateX(-50%);
-      margin: 12px 0 10px;
+      padding: 12px 0 10px;
     }
   }
 
@@ -97,10 +96,10 @@
     }
     line-height: $line-height-base;
     text-align: center;
-    margin-top: 9px + 6px;
+    margin-top: 9px;
 
     @media (min-width: $screen-sm-min) {
-      margin-top: 10px + 10px;
+      margin-top: 10px;
       padding-bottom: 4px;
     }
   }
