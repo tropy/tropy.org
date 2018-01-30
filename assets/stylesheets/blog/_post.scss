@@ -83,6 +83,10 @@
       transform: translateX(-50%);
       margin: (12px + $line-height-post) 0 (10px + $line-height-post);
     }
+
+    &.border {
+      border: 1px solid $post-img-border;
+    }
   }
 
   iframe {
