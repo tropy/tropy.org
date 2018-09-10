@@ -37,6 +37,14 @@ router.get('/license', (req, res) => {
   })
 })
 
+router.get('/jobs', (req, res) => {
+  res.render('jobs', {
+    path: req.path,
+    title: 'Tropy · Jobs',
+    page: 'jobs'
+  })
+})
+
 router.use('/download', download.api)
 router.use('/update', update.api)
 

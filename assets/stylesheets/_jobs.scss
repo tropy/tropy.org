@@ -1,0 +1,32 @@
+//
+// Jobs
+// --------------------------------------------------
+
+.jobs {
+  line-height: 28px;
+
+  .page-header {
+    margin-bottom: $space-xxxl - 18px;
+
+    @media (min-width: $screen-sm-min) {
+      margin-bottom: $space-max - 22px;
+    }
+  }
+
+  .h4 {
+    text-align: left;
+    margin-bottom: 16px;
+  }
+
+  p {
+    margin-bottom: 28px;
+
+    &:last-child {
+      margin-bottom: $space-xxxl - 6px;
+
+      @media (min-width: $screen-sm-min) {
+        margin-bottom: $space-max - 6px;
+      }
+    }
+  }
+}
