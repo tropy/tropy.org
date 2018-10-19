@@ -45,6 +45,14 @@ router.get('/jobs', (req, res) => {
   })
 })
 
+router.get('/workshops', (req, res) => {
+  res.render('workshops', {
+    path: req.path,
+    title: 'Tropy · Workshops',
+    page: 'workshops'
+  })
+})
+
 router.use('/download', download.api)
 router.use('/update', update.api)
 
