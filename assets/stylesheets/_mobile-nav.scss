@@ -71,6 +71,9 @@
   position: relative;
   transition: transform $mobile-nav-transition;
   overflow: hidden; // for the sake of safety
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 
   .nav-opened & {
     transform: translate3d(calc(-100% + #{$nav-toggle-width}), 0, 0);

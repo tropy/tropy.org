@@ -2,6 +2,18 @@
 // Scaffolding
 // --------------------------------------------------
 
+main {
+  flex: 1 1 auto;
+
+  + .container {
+    flex: 0 0 auto;
+
+    @media (max-width: $screen-xs-max) {
+      width: 100%;
+    }
+  }
+}
+
 .container-fluid {
   max-width: $container-fluid-width;
 
