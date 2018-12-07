@@ -13,7 +13,7 @@ addons:
   - tropy.org
 
 install:
-- npm install --silent
+- npm install
 
 before_script:
 - openssl aes-256-cbc
