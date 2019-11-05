@@ -4,49 +4,41 @@
 
 .main-footer {
   border-top: 1px solid $gray-lighter;
-  padding: $space-xl 0 21px;
-  text-align: center;
+  padding: ($space-xl - 11px) 0 ($space-xl + 4px);
+  font-size: $font-size-small;
+  line-height: $space-xl;
 
-  @media (min-width: $screen-md-min) {
-    padding: $space-xxl 0;
-    text-align: left;
+  @media (min-width: $screen-sm-min) {
+    padding: $space-xl 0 42px;
+    font-size: $font-size-base;
   }
 
   h2 {
-    display: inline;
     font: {
       size: inherit;
       family: inherit;
       weight: inherit;
     }
+    line-height: inherit;
     color: $blue-gray-light;
+    margin: 0 ($space-lg * 0.375 / 2) 0 $space-sm;
+
+    @media (min-width: $screen-sm-min) {
+      margin: 0 ($space-md / 2) 0 $space-lg;
+    }
   }
 }
 
-.footer-right {
-  margin-top: 18px;
-  line-height: $space-xl;
-  font-size: $font-size-small;
-
-  @media (min-width: $screen-md-min) {
-    margin-top: 0;
-    line-height: $space-xxl;
-    float: right;
-    font-size: $font-size-base;
-  }
+.footer-nav-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .footer-nav {
-  @media (min-width: $screen-md-min) {
-    display: inline;
-  }
-
-  ul,
-  li {
-    display: inline;
-  }
-
   ul {
+    display: flex;
+    justify-content: center;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -54,11 +46,6 @@
 
   a {
     color: $blue-gray;
-    margin-left: ($space-lg - 4px); // 4px white-space
-
-    @media (min-width: $screen-md-min) {
-      margin-left: ($grid-gutter-width - 4px); // 4px white-space
-    }
 
     &:hover {
       color: inherit;
@@ -67,19 +54,65 @@
 }
 
 .page-nav {
-  li:first-child {
-    a {
-      margin-left: 0;
+  a {
+    margin: 0 $space-sm;
+
+    @media (min-width: $screen-sm-min) {
+      margin: 0 $space-lg;
     }
   }
 }
 
-.social-nav {
-  @media (min-width: $screen-md-min) {
-    margin-left: ($grid-gutter-width - 4px); // 4px white-space
-  }
+.social-nav-container {
+  display: flex;
+  margin-right: $space-sm - ($space-lg * 0.375 / 2);
 
+  @media (min-width: $screen-sm) {
+    margin-right: $space-lg - ($space-xxl * 0.375 / 2);
+  }
+}
+
+.social-nav {
   a {
-    margin-left: ($space-sm - 4px); // 4px white-space
+    margin: 0 ($space-lg * 0.375 / 2);
+
+    @media (min-width: $screen-sm-min) {
+      margin: 0 ($space-xxl * 0.375 / 2);
+    }
+  }
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $screen-sm-min) {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: (42px - 14px);
+  }
+}
+
+.logo-link {
+  margin: 0 $space-lg;
+}
+
+.rrchnm-link {
+  @media (max-width: $screen-xs-max) {
+    margin-top: ($space-xl - 11px);
+  }
+}
+
+.c2dh-link {
+  position: relative;
+  left: 13px;
+  margin-top: ($space-xl - 4px);
+
+  @media (min-width: $screen-sm-min) {
+    left: 0;
+    margin-top: 0;
+    bottom: 4px;
   }
 }
