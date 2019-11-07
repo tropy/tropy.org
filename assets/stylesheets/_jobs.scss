@@ -13,19 +13,23 @@
     }
   }
 
-  .h4 {
-    text-align: left;
-    margin-bottom: 16px;
+  .jobs-illustration {
+    display: block;
+    margin: ($space-xxxl - 24px) auto ($space-xxxl - 24px);
+
+    @media (min-width: $screen-sm-min) {
+      margin-top: $space-xxl;
+    }
   }
 
   p {
     margin-bottom: 28px;
 
     &:last-child {
-      margin-bottom: $space-xxxl - 6px;
+      margin-bottom: $space-xxxl - 8px;
 
       @media (min-width: $screen-sm-min) {
-        margin-bottom: $space-max - 6px;
+        margin-bottom: $space-max - 9px;
       }
     }
   }
