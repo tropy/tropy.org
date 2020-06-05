@@ -15,7 +15,7 @@
 
   .jobs-illustration {
     display: block;
-    margin: ($space-xxxl - 24px) auto ($space-xxxl - 24px);
+    margin: ($space-xxxl - 24px) auto;
 
     @media (min-width: $screen-sm-min) {
       margin-top: $space-xxl;
