@@ -32,12 +32,6 @@
   }
 
   .contributor {
-    margin-bottom: 33px; // 48px
-
-    @media (min-width: $screen-sm-min) {
-      margin-bottom: 57px; // 96px
-    }
-
     &:nth-child(10) {
       @media (min-width: $screen-md-min) {
         margin-left: 16.67%;
