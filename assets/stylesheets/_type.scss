@@ -106,11 +106,3 @@ small,
     margin: 121px 0 61px; // 144px, assumes subsequent page-section-sm with h2
   }
 }
-
-.contributor {
-  margin-bottom: 33px; // 48px
-
-  @media (min-width: $screen-sm-min) {
-    margin-bottom: 57px; // 96px
-  }
-}
